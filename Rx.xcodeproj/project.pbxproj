@@ -23,6 +23,9 @@
 		1AF67DA81CED430100C310FA /* ReplaySubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */; };
 		271A97411CFC996B00D64125 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97401CFC996B00D64125 /* UIViewController+Rx.swift */; };
 		271A97441CFC9F7B00D64125 /* UIViewController+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */; };
+		451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
+		451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
+		451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		45CD9C4E1F5EE07F00A91A30 /* MyWithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */; };
 		4613456F1D9A4467001ABAF2 /* UIWebView+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */; };
 		461345711D9A4543001ABAF2 /* UIWebView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */; };
@@ -1688,6 +1691,7 @@
 		1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaySubjectTest.swift; sourceTree = "<group>"; };
 		271A97401CFC996B00D64125 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
+		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
 		45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWithLatestFrom.swift; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
 		461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Rx.swift"; sourceTree = "<group>"; };
@@ -2746,6 +2750,7 @@
 				C820A9811EB4FB0400D431BC /* Observable+UsingTests.swift */,
 				C820AA091EB513C800D431BC /* Observable+WindowTests.swift */,
 				C820A9A91EB505A800D431BC /* Observable+WithLatestFromTests.swift */,
+				451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */,
 				C81A097C1E6C27A100900B3B /* Observable+ZipTests.swift */,
 				C83509111C38706D0027C24C /* Observable+ZipTests+arity.swift */,
 				C83509121C38706D0027C24C /* Observable+ZipTests+arity.tt */,
@@ -4246,6 +4251,7 @@
 				C835094F1C38706E0027C24C /* CurrentThreadSchedulerTest.swift in Sources */,
 				C820A97E1EB4FA5A00D431BC /* Observable+RepeatTests.swift in Sources */,
 				C820A94A1EB4E75E00D431BC /* Observable+AmbTests.swift in Sources */,
+				451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */,
 				1AF67DA21CED420A00C310FA /* PublishSubjectTest.swift in Sources */,
 				C820A9C61EB50A4200D431BC /* Observable+SkipWhileTests.swift in Sources */,
 				C835093E1C38706E0027C24C /* UIView+RxTests.swift in Sources */,
@@ -4378,6 +4384,7 @@
 				C83509E01C3875500027C24C /* Observable+Extensions.swift in Sources */,
 				C8C4F1801DE9DF0200003FA7 /* UIProgressView+RxTests.swift in Sources */,
 				C85217EE1E33C8E60015DD38 /* PerformanceTools.swift in Sources */,
+				451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */,
 				C8C4F17C1DE9DF0200003FA7 /* UIDatePicker+RxTests.swift in Sources */,
 				C83509C41C3875220027C24C /* NSLayoutConstraint+RxTests.swift in Sources */,
 				C820A9731EB4F84000D431BC /* Observable+OptionalTests.swift in Sources */,
@@ -4544,6 +4551,7 @@
 				C86B1E241D42BF5200130546 /* SchedulerTests.swift in Sources */,
 				C89814801E75AD380035949C /* PrimitiveSequenceTest+zip+arity.swift in Sources */,
 				C820A9FC1EB510D500D431BC /* Observable+MaterializeTests.swift in Sources */,
+				451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */,
 				C83509E81C3875580027C24C /* PrimitiveMockObserver.swift in Sources */,
 				C83509BE1C3875100027C24C /* DelegateProxyTest+Cocoa.swift in Sources */,
 				C820A9F41EB5109300D431BC /* Observable+DefaultIfEmpty.swift in Sources */,
