@@ -26,6 +26,7 @@
 		451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
+		451E6E691F62E28F0035264A /* MyCombineLatest+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */; };
 		45CD9C4E1F5EE07F00A91A30 /* MyWithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */; };
 		4613456F1D9A4467001ABAF2 /* UIWebView+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */; };
 		461345711D9A4543001ABAF2 /* UIWebView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */; };
@@ -1692,6 +1693,7 @@
 		271A97401CFC996B00D64125 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
 		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
+		451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyCombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWithLatestFrom.swift; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
 		461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Rx.swift"; sourceTree = "<group>"; };
@@ -2408,6 +2410,7 @@
 				C820A8251EB4DA5900D431BC /* CombineLatest+arity.swift */,
 				C820A8261EB4DA5900D431BC /* CombineLatest+arity.tt */,
 				C820A80C1EB4DA5900D431BC /* CombineLatest+Collection.swift */,
+				451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */,
 				C820A8091EB4DA5900D431BC /* Concat.swift */,
 				C820A8181EB4DA5900D431BC /* Create.swift */,
 				C820A7F11EB4DA5900D431BC /* Debounce.swift */,
@@ -4934,6 +4937,7 @@
 				C820A8741EB4DA5A00D431BC /* SkipWhile.swift in Sources */,
 				C820A91C1EB4DA5A00D431BC /* AsSingle.swift in Sources */,
 				C8BF34CF1C2E426800416CAE /* Platform.Linux.swift in Sources */,
+				451E6E691F62E28F0035264A /* MyCombineLatest+Collection.swift in Sources */,
 				C8093D791B8A72BE0088E94D /* TailRecursiveSink.swift in Sources */,
 				C8093CC71B8A72BE0088E94D /* AsyncLock.swift in Sources */,
 				C820A8501EB4DA5900D431BC /* Timer.swift in Sources */,

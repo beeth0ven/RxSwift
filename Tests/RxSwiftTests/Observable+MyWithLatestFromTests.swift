@@ -61,4 +61,64 @@ extension ObservableMyWithLatestFromTest {
             Subscription(200, 400)
             ])
     }
+    
+    func testMyWithLatestFrom_TwoObservablesWithImmediateValues() {
+        let xs = BehaviorSubject(value: 3)
+        let ys = BehaviorSubject(value: 5)
+        
+        let scheduler = TestScheduler(initialClock: 0)
+        
+        let res = scheduler.start {
+            xs.withLatestFrom(ys) { x, y in "\(x)\(y)" }
+                .take(1)
+        }
+        
+        XCTAssertEqual(res.events, [
+            next(200, "35"),
+            completed(200)
+            ])
+        
+    }
+    
+    func testMyWithLatestFrom_Simple2() {
+        let scheduler = TestScheduler(initialClock: 0)
+        
+        let xs = scheduler.createHotObservable([
+            next(90, 1),
+            next(180, 2),
+            next(250, 3),
+            next(260, 4),
+            next(310, 5),
+            next(340, 6),
+            completed(390)
+            ])
+        
+        let ys = scheduler.createHotObservable([
+            next(255, "bar"),
+            next(330, "foo"),
+            next(350, "qux"),
+            next(370, "baz"),
+            completed(400)
+            ])
+        
+        let res = scheduler.start {
+            xs.withLatestFrom(ys) { x, y in "\(x)\(y)" }
+        }
+        
+        XCTAssertEqual(res.events, [
+            next(260, "4bar"),
+            next(310, "5bar"),
+            next(340, "6foo"),
+            completed(390)
+            ])
+        
+        XCTAssertEqual(xs.subscriptions, [
+            Subscription(200, 390)
+            ])
+        
+        XCTAssertEqual(ys.subscriptions, [
+            Subscription(200, 390)
+            ])
+    }
+    
 }
