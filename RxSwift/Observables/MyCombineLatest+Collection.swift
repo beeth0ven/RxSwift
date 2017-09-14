@@ -8,6 +8,15 @@
 
 extension Observable {
     
+    public static func myCombineLatest<O: ObservableType>(_ collection: O..., _ resultSelector: @escaping ([O.E]) throws -> Element) -> Observable<Element> {
+            return MyCombineLatestCollectionType(sources: collection, resultSelector: resultSelector)
+    }
+    
+    public static func myCombineLatest<O: ObservableType>(_ collection: O ...) -> Observable<[Element]>
+        where O.E == Element {
+            return MyCombineLatestCollectionType(sources: collection, resultSelector: { $0 })
+    }
+    
     public static func myCombineLatest<C: Collection>(_ collection: C, _ resultSelector: @escaping ([C.Iterator.Element.E]) throws -> Element) -> Observable<Element>
         where C.Iterator.Element: ObservableType {
         return MyCombineLatestCollectionType(sources: collection, resultSelector: resultSelector)
