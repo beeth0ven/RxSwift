@@ -27,6 +27,10 @@
 		4506F1981F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1991F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F19A1F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
+		4506F19C1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
+		4506F19D1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
+		4506F19E1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
+		4506F19F1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
 		451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
@@ -1700,6 +1704,7 @@
 		271A97401CFC996B00D64125 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
 		4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxyType.swift; sourceTree = "<group>"; };
+		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
 		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
 		451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyCombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyCombineLatestTests.swift"; sourceTree = "<group>"; };
@@ -2550,6 +2555,7 @@
 			children = (
 				C80D338E1B91EF9E0014629D /* Observable+Bind.swift */,
 				C8093E8B1B8A732E0088E94D /* DelegateProxy.swift */,
+				4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */,
 				C8093E8C1B8A732E0088E94D /* DelegateProxyType.swift */,
 				4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */,
 				C8093E9C1B8A732E0088E94D /* RxTarget.swift */,
@@ -4107,6 +4113,7 @@
 				C89AB2121DAAC3350065FBE6 /* NotificationCenter+Rx.swift in Sources */,
 				C88254181B8A752B00B02D69 /* ItemEvents.swift in Sources */,
 				C89AB1731DAAC1680065FBE6 /* ControlTarget.swift in Sources */,
+				4506F19C1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
 				C882541B1B8A752B00B02D69 /* RxTableViewDataSourceType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4153,6 +4160,7 @@
 				C89AB1CB1DAAC3350065FBE6 /* ControlProperty.swift in Sources */,
 				C89AB20F1DAAC3350065FBE6 /* Logging.swift in Sources */,
 				C89AB2031DAAC3350065FBE6 /* KVORepresentable+CoreGraphics.swift in Sources */,
+				4506F19D1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
 				C8093EE21B8A732E0088E94D /* DelegateProxy.swift in Sources */,
 				C89AB1F31DAAC3350065FBE6 /* SharedSequence+Operators.swift in Sources */,
 				C86781A61DB823B500B2029A /* NSSlider+Rx.swift in Sources */,
@@ -5259,6 +5267,7 @@
 				A520FFFF1F0D291500573734 /* RxPickerViewDataSourceProxy.swift in Sources */,
 				C8F0C0221BBBFBB9001B112F /* UIButton+Rx.swift in Sources */,
 				9BA1CBFE1C0F84C40044B50A /* UIActivityIndicatorView+Rx.swift in Sources */,
+				4506F19F1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
 				C89AB1A91DAAC25A0065FBE6 /* RxCocoaObjCRuntimeError+Extensions.swift in Sources */,
 				842A5A2E1C357F94003568D5 /* NSTextStorage+Rx.swift in Sources */,
 				C8F0C0281BBBFBB9001B112F /* RxTextViewDelegateProxy.swift in Sources */,
@@ -5393,6 +5402,7 @@
 				C89AB1CC1DAAC3350065FBE6 /* ControlProperty.swift in Sources */,
 				D2138C861BB9BEBE00339B5C /* Observable+Bind.swift in Sources */,
 				AAE623771C82475700FC7801 /* UIProgressView+Rx.swift in Sources */,
+				4506F19E1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
 				C89AB23A1DAAC3A60065FBE6 /* _RX.m in Sources */,
 				D203C50A1BB9C53E00D02D00 /* UILabel+Rx.swift in Sources */,
 				C89AB1FC1DAAC3350065FBE6 /* Variable+SharedSequence.swift in Sources */,

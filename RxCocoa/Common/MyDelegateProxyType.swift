@@ -50,31 +50,54 @@ extension IsDelegateProxy {
         
         return proxy
     }
-}
-
-import UIKit
-
-protocol HasDelegate: AnyObject {
-    associatedtype Delegate
-    var delegate: Delegate? { get set }
-}
-
-extension UIScrollView: HasDelegate {
-    typealias Delegate = UIScrollViewDelegate
-}
-
-extension UITableView {
-    typealias Delegate = UITableViewDelegate
-}
-
-class MyDelegateProxy<O: HasDelegate> {
     
+    public static func installForwardDelegate(_ forwardDelegate: AnyObject, retainDelegate: Bool, onProxyForObject object: AnyObject) -> Disposable {
+        weak var weakForwardDelegate: AnyObject? = forwardDelegate
+        
+        let proxy = Self.proxyForObject(object)
+        
+        assert(proxy.getForwardDelegate() === nil)
+        
+        proxy.setForwardDelegate(forwardDelegate, retainDelegate: retainDelegate)
+        
+        return Disposables.create {
+            MainScheduler.ensureExecutingOnScheduler()
+            
+            let delegate = weakForwardDelegate
+            
+            assert(delegate == nil || proxy.getForwardDelegate() === delegate)
+            
+            proxy.setForwardDelegate(nil, retainDelegate: retainDelegate)
+        }
+    }
 }
 
-class MyScrollViewDelegateProxy: MyDelegateProxy<UIScrollView> {
-    
-}
 
-class MyTableViewDelegateProxy: MyDelegateProxy<UITableView> {
-    
-}
+
+//import UIKit
+//
+//protocol HasDelegate: AnyObject {
+//    associatedtype Delegate
+//    var delegate: Delegate? { get set }
+//}
+//
+//extension UIScrollView: HasDelegate {
+//    typealias Delegate = UIScrollViewDelegate
+//}
+//
+//extension UITableView {
+//    typealias Delegate = UITableViewDelegate
+//}
+//
+//class MyDelegateProxy<O: HasDelegate> {
+//
+//}
+//
+//class MyScrollViewDelegateProxy: MyDelegateProxy<UIScrollView> {
+//
+//}
+//
+//class MyTableViewDelegateProxy: MyDelegateProxy<UITableView> {
+//
+//}
+
