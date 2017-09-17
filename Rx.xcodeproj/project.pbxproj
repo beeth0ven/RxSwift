@@ -31,6 +31,14 @@
 		4506F19D1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
 		4506F19E1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
 		4506F19F1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */; };
+		4506F1A11F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */; };
+		4506F1A21F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */; };
+		4506F1A31F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */; };
+		4506F1A41F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */; };
+		4506F1A61F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
+		4506F1A71F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
+		4506F1A81F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
+		4506F1A91F6E5FF900E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
 		451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
@@ -1705,6 +1713,8 @@
 		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
 		4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxyType.swift; sourceTree = "<group>"; };
 		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
+		4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
+		4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyScrollView+Rx.swift"; sourceTree = "<group>"; };
 		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
 		451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyCombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyCombineLatestTests.swift"; sourceTree = "<group>"; };
@@ -2934,6 +2944,7 @@
 				AAE623751C82475700FC7801 /* UIProgressView+Rx.swift */,
 				7F600F3D1C5D0C0100535B1D /* UIRefreshControl+Rx.swift */,
 				C882540D1B8A752B00B02D69 /* UIScrollView+Rx.swift */,
+				4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */,
 				C882540E1B8A752B00B02D69 /* UISearchBar+Rx.swift */,
 				D9080AD21EA05DDF002B433B /* UINavigationController+Rx.swift */,
 				C882540F1B8A752B00B02D69 /* UISegmentedControl+Rx.swift */,
@@ -2992,6 +3003,7 @@
 				C88253FC1B8A752B00B02D69 /* RxCollectionViewDataSourceProxy.swift */,
 				C88253FD1B8A752B00B02D69 /* RxCollectionViewDelegateProxy.swift */,
 				C88253FE1B8A752B00B02D69 /* RxScrollViewDelegateProxy.swift */,
+				4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */,
 				C88253FF1B8A752B00B02D69 /* RxSearchBarDelegateProxy.swift */,
 				ECBBA59D1DF8C0D400DDDC2E /* RxTabBarControllerDelegateProxy.swift */,
 				88D98F2D1CE7549A00D50457 /* RxTabBarDelegateProxy.swift */,
@@ -4045,6 +4057,7 @@
 				C89AB1A61DAAC25A0065FBE6 /* RxCocoaObjCRuntimeError+Extensions.swift in Sources */,
 				C88254161B8A752B00B02D69 /* RxCollectionViewReactiveArrayDataSource.swift in Sources */,
 				C89AB2221DAAC3350065FBE6 /* URLSession+Rx.swift in Sources */,
+				4506F1A11F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */,
 				846436E31C9AF65B0035B40D /* RxSearchControllerDelegateProxy.swift in Sources */,
 				C882541F1B8A752B00B02D69 /* RxCollectionViewDelegateProxy.swift in Sources */,
 				46307D4E1CDE77D800E47A1C /* UIAlertAction+Rx.swift in Sources */,
@@ -4113,6 +4126,7 @@
 				C89AB2121DAAC3350065FBE6 /* NotificationCenter+Rx.swift in Sources */,
 				C88254181B8A752B00B02D69 /* ItemEvents.swift in Sources */,
 				C89AB1731DAAC1680065FBE6 /* ControlTarget.swift in Sources */,
+				4506F1A61F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */,
 				4506F19C1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
 				C882541B1B8A752B00B02D69 /* RxTableViewDataSourceType.swift in Sources */,
 			);
@@ -4122,6 +4136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4506F1A71F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */,
 				C89AB1C71DAAC3350065FBE6 /* ControlEvent.swift in Sources */,
 				C89AB1F71DAAC3350065FBE6 /* SharedSequence.swift in Sources */,
 				C89AB21B1DAAC3350065FBE6 /* NSObject+Rx+RawRepresentable.swift in Sources */,
@@ -4161,6 +4176,7 @@
 				C89AB20F1DAAC3350065FBE6 /* Logging.swift in Sources */,
 				C89AB2031DAAC3350065FBE6 /* KVORepresentable+CoreGraphics.swift in Sources */,
 				4506F19D1F6C14C100E8ED30 /* MyDelegateProxy.swift in Sources */,
+				4506F1A21F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */,
 				C8093EE21B8A732E0088E94D /* DelegateProxy.swift in Sources */,
 				C89AB1F31DAAC3350065FBE6 /* SharedSequence+Operators.swift in Sources */,
 				C86781A61DB823B500B2029A /* NSSlider+Rx.swift in Sources */,
@@ -5255,6 +5271,7 @@
 				C8F0C01A1BBBFBB9001B112F /* RxCollectionViewDelegateProxy.swift in Sources */,
 				C89AB1E51DAAC3350065FBE6 /* Variable+Driver.swift in Sources */,
 				C817729B1E7F408100EA679B /* Deprecated.swift in Sources */,
+				4506F1A91F6E5FF900E8ED30 /* MyScrollView+Rx.swift in Sources */,
 				C89AB1E11DAAC3350065FBE6 /* ObservableConvertibleType+Driver.swift in Sources */,
 				C8F0C01B1BBBFBB9001B112F /* RxScrollViewDelegateProxy.swift in Sources */,
 				C8F0C01C1BBBFBB9001B112F /* UILabel+Rx.swift in Sources */,
@@ -5263,6 +5280,7 @@
 				C89AB2051DAAC3350065FBE6 /* KVORepresentable+CoreGraphics.swift in Sources */,
 				C8F0C01F1BBBFBB9001B112F /* Observable+Bind.swift in Sources */,
 				C8F0C0201BBBFBB9001B112F /* UISegmentedControl+Rx.swift in Sources */,
+				4506F1A41F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */,
 				C89AB1ED1DAAC3350065FBE6 /* SharedSequence+Operators+arity.swift in Sources */,
 				A520FFFF1F0D291500573734 /* RxPickerViewDataSourceProxy.swift in Sources */,
 				C8F0C0221BBBFBB9001B112F /* UIButton+Rx.swift in Sources */,
@@ -5347,12 +5365,14 @@
 				C89AB1D41DAAC3350065FBE6 /* ControlProperty+Driver.swift in Sources */,
 				C89AB1D01DAAC3350065FBE6 /* ControlEvent+Driver.swift in Sources */,
 				84C225A41C33F00B008724EC /* RxTextStorageDelegateProxy.swift in Sources */,
+				4506F1A31F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift in Sources */,
 				C89AB2081DAAC3350065FBE6 /* KVORepresentable+Swift.swift in Sources */,
 				D9080AD01EA05AF7002B433B /* RxNavigationControllerDelegateProxy.swift in Sources */,
 				D203C5131BB9C53E00D02D00 /* UITextView+Rx.swift in Sources */,
 				D203C4F41BB9C52400D02D00 /* RxTableViewReactiveArrayDataSource.swift in Sources */,
 				D9080AD51EA05DEB002B433B /* UINavigationController+Rx.swift in Sources */,
 				7F600F401C5D0C6D00535B1D /* UIRefreshControl+Rx.swift in Sources */,
+				4506F1A81F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */,
 				C89AB1D81DAAC3350065FBE6 /* Driver+Subscription.swift in Sources */,
 				C89AB1DC1DAAC3350065FBE6 /* Driver.swift in Sources */,
 				D2138C881BB9BEBE00339B5C /* DelegateProxy.swift in Sources */,

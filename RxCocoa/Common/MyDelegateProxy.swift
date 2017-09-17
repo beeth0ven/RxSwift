@@ -75,11 +75,15 @@ open class MyDelegateProxy: _RXDelegateProxy {
         methodInvokedSubjects[selector]?.onNext(arguments)
     }
     
-    open static func getProxyFor(_ object: AnyObject) -> AnyObject? {
+    open class func createProxyForObject(_ object: AnyObject) -> AnyObject {
+        return self.init(parentObject: object)
+    }
+
+    open class func getProxyFor(_ object: AnyObject) -> AnyObject? {
         return objc_getAssociatedObject(object, delegateAssociatedKey) as AnyObject?
     }
     
-    open static func setProxy(_ proxy: AnyObject, to object: AnyObject) {
+    open class func setProxy(_ proxy: AnyObject, to object: AnyObject) {
         precondition(proxy.isKind(of: self.classForCoder()))
         objc_setAssociatedObject(object, delegateAssociatedKey, proxy, .OBJC_ASSOCIATION_RETAIN)
     }
