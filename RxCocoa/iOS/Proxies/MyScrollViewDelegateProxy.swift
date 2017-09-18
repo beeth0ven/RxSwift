@@ -56,7 +56,7 @@ public class MyCrollViewDelegateProxy: MyDelegateProxy,
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         _contentOffsetBehaviorSubject?.onNext(scrollView.contentOffset)
         _contentOffsetPublishSubject?.onNext(())
-        (self._forwardToDelegate as? UIScrollViewDelegate)?.scrollViewDidScroll?(scrollView)
+        self._forwardToDelegate?.scrollViewDidScroll?(scrollView)
     }
     
     deinit {

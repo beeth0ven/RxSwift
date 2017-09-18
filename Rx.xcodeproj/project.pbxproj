@@ -39,6 +39,10 @@
 		4506F1A71F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
 		4506F1A81F6E5FF800E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
 		4506F1A91F6E5FF900E8ED30 /* MyScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */; };
+		4506F1AB1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */; };
+		4506F1AC1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */; };
+		4506F1AD1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */; };
+		4506F1AE1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */; };
 		451E6E651F603CCB0035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E661F603CD20035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
 		451E6E671F603CD30035264A /* Observable+MyWithLatestFromTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */; };
@@ -1715,6 +1719,7 @@
 		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
 		4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
 		4506F1A51F6E5FF800E8ED30 /* MyScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyScrollView+Rx.swift"; sourceTree = "<group>"; };
+		4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRxTableViewDelegateProxy.swift; sourceTree = "<group>"; };
 		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
 		451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyCombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyCombineLatestTests.swift"; sourceTree = "<group>"; };
@@ -3009,6 +3014,7 @@
 				88D98F2D1CE7549A00D50457 /* RxTabBarDelegateProxy.swift */,
 				C88254001B8A752B00B02D69 /* RxTableViewDataSourceProxy.swift */,
 				C88254011B8A752B00B02D69 /* RxTableViewDelegateProxy.swift */,
+				4506F1AA1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift */,
 				C88254021B8A752B00B02D69 /* RxTextViewDelegateProxy.swift */,
 				84C225A21C33F00B008724EC /* RxTextStorageDelegateProxy.swift */,
 				846436E11C9AF64C0035B40D /* RxSearchControllerDelegateProxy.swift */,
@@ -4080,6 +4086,7 @@
 				ECBBA59B1DF8C0BA00DDDC2E /* UITabBarController+Rx.swift in Sources */,
 				C89AB21A1DAAC3350065FBE6 /* NSObject+Rx+RawRepresentable.swift in Sources */,
 				C8BCD3ED1C14B5FB005F1280 /* UIView+Rx.swift in Sources */,
+				4506F1AB1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */,
 				A5CD038A1F1660F40005A376 /* RxPickerViewAdapter.swift in Sources */,
 				C89AB2021DAAC3350065FBE6 /* KVORepresentable+CoreGraphics.swift in Sources */,
 				C80D338F1B91EF9E0014629D /* Observable+Bind.swift in Sources */,
@@ -4166,6 +4173,7 @@
 				C89AB1741DAAC1680065FBE6 /* ControlTarget.swift in Sources */,
 				C86781971DB823B500B2029A /* NSButton+Rx.swift in Sources */,
 				C89AB2131DAAC3350065FBE6 /* NotificationCenter+Rx.swift in Sources */,
+				4506F1AC1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */,
 				C8BCD3F51C14B6D1005F1280 /* NSLayoutConstraint+Rx.swift in Sources */,
 				C89AB2491DAAC3A60065FBE6 /* _RXKVOObserver.m in Sources */,
 				C89AB1E71DAAC3350065FBE6 /* ObservableConvertibleType+SharedSequence.swift in Sources */,
@@ -5270,6 +5278,7 @@
 				54D213931CE08DDB0028D5B4 /* UINavigationItem+Rx.swift in Sources */,
 				C8F0C01A1BBBFBB9001B112F /* RxCollectionViewDelegateProxy.swift in Sources */,
 				C89AB1E51DAAC3350065FBE6 /* Variable+Driver.swift in Sources */,
+				4506F1AE1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */,
 				C817729B1E7F408100EA679B /* Deprecated.swift in Sources */,
 				4506F1A91F6E5FF900E8ED30 /* MyScrollView+Rx.swift in Sources */,
 				C89AB1E11DAAC3350065FBE6 /* ObservableConvertibleType+Driver.swift in Sources */,
@@ -5407,6 +5416,7 @@
 				46307D4F1CDE77D800E47A1C /* UIAlertAction+Rx.swift in Sources */,
 				C89AB1C81DAAC3350065FBE6 /* ControlEvent.swift in Sources */,
 				D203C5061BB9C53E00D02D00 /* UIControl+Rx.swift in Sources */,
+				4506F1AD1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */,
 				D203C5111BB9C53E00D02D00 /* UITableView+Rx.swift in Sources */,
 				D203C5051BB9C53E00D02D00 /* UICollectionView+Rx.swift in Sources */,
 				9BA1CBFD1C0F84A10044B50A /* UIActivityIndicatorView+Rx.swift in Sources */,
