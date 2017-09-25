@@ -23,6 +23,18 @@
 		1AF67DA81CED430100C310FA /* ReplaySubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */; };
 		271A97411CFC996B00D64125 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97401CFC996B00D64125 /* UIViewController+Rx.swift */; };
 		271A97441CFC9F7B00D64125 /* UIViewController+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */; };
+		4501683B1F77E99300A96927 /* MySharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683A1F77E99300A96927 /* MySharedSequence.swift */; };
+		4501683C1F77E99300A96927 /* MySharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683A1F77E99300A96927 /* MySharedSequence.swift */; };
+		4501683D1F77E99300A96927 /* MySharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683A1F77E99300A96927 /* MySharedSequence.swift */; };
+		4501683E1F77E99300A96927 /* MySharedSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683A1F77E99300A96927 /* MySharedSequence.swift */; };
+		450168401F77EFBD00A96927 /* MyDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683F1F77EFBD00A96927 /* MyDriver.swift */; };
+		450168411F77EFBD00A96927 /* MyDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683F1F77EFBD00A96927 /* MyDriver.swift */; };
+		450168421F77EFBD00A96927 /* MyDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683F1F77EFBD00A96927 /* MyDriver.swift */; };
+		450168431F77EFBD00A96927 /* MyDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501683F1F77EFBD00A96927 /* MyDriver.swift */; };
+		450168451F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
+		450168461F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
+		450168471F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
+		450168481F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
 		4506F1971F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1981F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1991F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
@@ -1715,6 +1727,9 @@
 		1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaySubjectTest.swift; sourceTree = "<group>"; };
 		271A97401CFC996B00D64125 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
+		4501683A1F77E99300A96927 /* MySharedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharedSequence.swift; sourceTree = "<group>"; };
+		4501683F1F77EFBD00A96927 /* MyDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDriver.swift; sourceTree = "<group>"; };
+		450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPrimitiveSequence.swift; sourceTree = "<group>"; };
 		4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxyType.swift; sourceTree = "<group>"; };
 		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
 		4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -2602,6 +2617,7 @@
 			isa = PBXGroup;
 			children = (
 				C81A09861E6C702700900B3B /* PrimitiveSequence.swift */,
+				450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */,
 				C89814751E75A18A0035949C /* PrimitiveSequence+Zip+arity.tt */,
 				C89814771E75A7D70035949C /* PrimitiveSequence+Zip+arity.swift */,
 				C8A53ADF1F09178700490535 /* Completable+AndThen.swift */,
@@ -3045,6 +3061,7 @@
 				C89AB1AF1DAAC3350065FBE6 /* ControlProperty+Driver.swift */,
 				C89AB1B01DAAC3350065FBE6 /* Driver+Subscription.swift */,
 				C89AB1B11DAAC3350065FBE6 /* Driver.swift */,
+				4501683F1F77EFBD00A96927 /* MyDriver.swift */,
 				C89AB1B21DAAC3350065FBE6 /* ObservableConvertibleType+Driver.swift */,
 				C89AB1B31DAAC3350065FBE6 /* Variable+Driver.swift */,
 			);
@@ -3059,6 +3076,7 @@
 				C89AB1B71DAAC3350065FBE6 /* SharedSequence+Operators+arity.tt */,
 				C89AB1B81DAAC3350065FBE6 /* SharedSequence+Operators.swift */,
 				C89AB1B91DAAC3350065FBE6 /* SharedSequence.swift */,
+				4501683A1F77E99300A96927 /* MySharedSequence.swift */,
 				C89AB1BA1DAAC3350065FBE6 /* Variable+SharedSequence.swift */,
 			);
 			path = SharedSequence;
@@ -4070,6 +4088,7 @@
 				C88254201B8A752B00B02D69 /* RxScrollViewDelegateProxy.swift in Sources */,
 				C89AB20A1DAAC3350065FBE6 /* KVORepresentable.swift in Sources */,
 				C88F76811CE5341700D5A014 /* TextInput.swift in Sources */,
+				450168451F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */,
 				C882542E1B8A752B00B02D69 /* UILabel+Rx.swift in Sources */,
 				C89AB1CE1DAAC3350065FBE6 /* ControlEvent+Driver.swift in Sources */,
 				C89AB1D61DAAC3350065FBE6 /* Driver+Subscription.swift in Sources */,
@@ -4086,12 +4105,14 @@
 				ECBBA59B1DF8C0BA00DDDC2E /* UITabBarController+Rx.swift in Sources */,
 				C89AB21A1DAAC3350065FBE6 /* NSObject+Rx+RawRepresentable.swift in Sources */,
 				C8BCD3ED1C14B5FB005F1280 /* UIView+Rx.swift in Sources */,
+				4501683B1F77E99300A96927 /* MySharedSequence.swift in Sources */,
 				4506F1AB1F6E9BDB00E8ED30 /* MyRxTableViewDelegateProxy.swift in Sources */,
 				A5CD038A1F1660F40005A376 /* RxPickerViewAdapter.swift in Sources */,
 				C89AB2021DAAC3350065FBE6 /* KVORepresentable+CoreGraphics.swift in Sources */,
 				C80D338F1B91EF9E0014629D /* Observable+Bind.swift in Sources */,
 				C81772981E7F408100EA679B /* Deprecated.swift in Sources */,
 				C88254311B8A752B00B02D69 /* UISegmentedControl+Rx.swift in Sources */,
+				450168401F77EFBD00A96927 /* MyDriver.swift in Sources */,
 				AAE623761C82475700FC7801 /* UIProgressView+Rx.swift in Sources */,
 				271A97411CFC996B00D64125 /* UIViewController+Rx.swift in Sources */,
 				C89AB2481DAAC3A60065FBE6 /* _RXKVOObserver.m in Sources */,
@@ -4153,6 +4174,7 @@
 				C8093EE41B8A732E0088E94D /* DelegateProxyType.swift in Sources */,
 				C86781AB1DB823B500B2029A /* NSTextField+Rx.swift in Sources */,
 				A520FFF81F0D258E00573734 /* RxPickerViewDataSourceType.swift in Sources */,
+				4501683C1F77E99300A96927 /* MySharedSequence.swift in Sources */,
 				C89AB1E31DAAC3350065FBE6 /* Variable+Driver.swift in Sources */,
 				C89AB1D31DAAC3350065FBE6 /* ControlProperty+Driver.swift in Sources */,
 				C8A81CA11E05E82C0008DEF4 /* DispatchQueue+Extensions.swift in Sources */,
@@ -4190,9 +4212,11 @@
 				C86781A61DB823B500B2029A /* NSSlider+Rx.swift in Sources */,
 				4506F1981F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */,
 				C89AB2231DAAC3350065FBE6 /* URLSession+Rx.swift in Sources */,
+				450168461F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */,
 				C86781A11DB823B500B2029A /* NSImageView+Rx.swift in Sources */,
 				C89AB2281DAAC33F0065FBE6 /* RxCocoa.swift in Sources */,
 				C8D132451C42D15E00B59FFF /* SectionedViewDataSourceType.swift in Sources */,
+				450168411F77EFBD00A96927 /* MyDriver.swift in Sources */,
 				C80D33901B91EF9E0014629D /* Observable+Bind.swift in Sources */,
 				C89AB1EB1DAAC3350065FBE6 /* SharedSequence+Operators+arity.swift in Sources */,
 			);
@@ -5257,6 +5281,7 @@
 				C8F0C00C1BBBFBB9001B112F /* RxTableViewReactiveArrayDataSource.swift in Sources */,
 				C8F0C00D1BBBFBB9001B112F /* RxCollectionViewDataSourceProxy.swift in Sources */,
 				84C225A51C33F00B008724EC /* RxTextStorageDelegateProxy.swift in Sources */,
+				4501683E1F77E99300A96927 /* MySharedSequence.swift in Sources */,
 				C8F0C0101BBBFBB9001B112F /* RxTableViewDelegateProxy.swift in Sources */,
 				7F600F3F1C5D0C6C00535B1D /* UIRefreshControl+Rx.swift in Sources */,
 				C8F0C0111BBBFBB9001B112F /* UIStepper+Rx.swift in Sources */,
@@ -5314,6 +5339,7 @@
 				C89AB1F91DAAC3350065FBE6 /* SharedSequence.swift in Sources */,
 				C89AB1DD1DAAC3350065FBE6 /* Driver.swift in Sources */,
 				C89AB1D91DAAC3350065FBE6 /* Driver+Subscription.swift in Sources */,
+				450168481F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */,
 				91BE429F1CBF7F3D00F6B062 /* UIPageControl+Rx.swift in Sources */,
 				846436E61C9AF6670035B40D /* RxSearchControllerDelegateProxy.swift in Sources */,
 				D9080AD11EA05DA2002B433B /* RxNavigationControllerDelegateProxy.swift in Sources */,
@@ -5326,6 +5352,7 @@
 				C89AB2531DAAC3A60065FBE6 /* _RXObjCRuntime.m in Sources */,
 				C8F0C0381BBBFBB9001B112F /* UITextField+Rx.swift in Sources */,
 				4506F19A1F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */,
+				450168431F77EFBD00A96927 /* MyDriver.swift in Sources */,
 				C89AB1F51DAAC3350065FBE6 /* SharedSequence+Operators.swift in Sources */,
 				C89AB1CD1DAAC3350065FBE6 /* ControlProperty.swift in Sources */,
 				C89AB1D51DAAC3350065FBE6 /* ControlProperty+Driver.swift in Sources */,
@@ -5408,6 +5435,7 @@
 				D2138C891BB9BEBE00339B5C /* DelegateProxyType.swift in Sources */,
 				C89AB21C1DAAC3350065FBE6 /* NSObject+Rx+RawRepresentable.swift in Sources */,
 				C88F76831CE5341700D5A014 /* TextInput.swift in Sources */,
+				450168471F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */,
 				C89AB20C1DAAC3350065FBE6 /* KVORepresentable.swift in Sources */,
 				54D213921CE08D0C0028D5B4 /* UINavigationItem+Rx.swift in Sources */,
 				C89AB1F41DAAC3350065FBE6 /* SharedSequence+Operators.swift in Sources */,
@@ -5438,7 +5466,9 @@
 				C89AB1FC1DAAC3350065FBE6 /* Variable+SharedSequence.swift in Sources */,
 				D203C4F51BB9C52900D02D00 /* ItemEvents.swift in Sources */,
 				A520FFF91F0D258E00573734 /* RxPickerViewDataSourceType.swift in Sources */,
+				450168421F77EFBD00A96927 /* MyDriver.swift in Sources */,
 				C8BCD3F61C14B6D1005F1280 /* NSLayoutConstraint+Rx.swift in Sources */,
+				4501683D1F77E99300A96927 /* MySharedSequence.swift in Sources */,
 				D203C4FA1BB9C53700D02D00 /* RxCollectionViewDataSourceProxy.swift in Sources */,
 				C89AB2141DAAC3350065FBE6 /* NotificationCenter+Rx.swift in Sources */,
 				91BE429D1CBF7EC000F6B062 /* UIPageControl+Rx.swift in Sources */,
