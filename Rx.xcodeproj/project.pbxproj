@@ -59,6 +59,10 @@
 		4501687F1F7BEE9200A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
 		450168801F7BEE9300A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
 		450168811F7BEE9400A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
+		450168841F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168831F7D2F6E00A96927 /* MyPublishSubject.swift */; };
+		450168851F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168831F7D2F6E00A96927 /* MyPublishSubject.swift */; };
+		450168861F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168831F7D2F6E00A96927 /* MyPublishSubject.swift */; };
+		450168871F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168831F7D2F6E00A96927 /* MyPublishSubject.swift */; };
 		4506F1971F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1981F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1991F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
@@ -1760,6 +1764,7 @@
 		450168581F7BD90000A96927 /* MySchedulerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchedulerType.swift; sourceTree = "<group>"; };
 		4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySerialDispatchQueueScheduler.swift; sourceTree = "<group>"; };
 		450168621F7BEC1700A96927 /* MyMainScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainScheduler.swift; sourceTree = "<group>"; };
+		450168831F7D2F6E00A96927 /* MyPublishSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPublishSubject.swift; sourceTree = "<group>"; };
 		4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxyType.swift; sourceTree = "<group>"; };
 		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
 		4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -2590,6 +2595,7 @@
 				0BA949661E224B7E0036DD06 /* AsyncSubject.swift */,
 				C8093CBE1B8A72BE0088E94D /* BehaviorSubject.swift */,
 				C8093CBF1B8A72BE0088E94D /* PublishSubject.swift */,
+				450168831F7D2F6E00A96927 /* MyPublishSubject.swift */,
 				C8093CC01B8A72BE0088E94D /* ReplaySubject.swift */,
 				C8093CC11B8A72BE0088E94D /* SubjectType.swift */,
 				C8093CC21B8A72BE0088E94D /* Variable.swift */,
@@ -4852,6 +4858,7 @@
 				450168681F7BEE3200A96927 /* MyMainScheduler.swift in Sources */,
 				C84CC5631BDD037900E06A64 /* SynchronizedDisposeType.swift in Sources */,
 				C8093D961B8A72BE0088E94D /* OperationQueueScheduler.swift in Sources */,
+				450168851F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */,
 				C85217EA1E3374970015DD38 /* GroupedObservable.swift in Sources */,
 				C820A93D1EB4DA5A00D431BC /* Zip+arity.swift in Sources */,
 				C8093CDE1B8A72BE0088E94D /* DisposeBag.swift in Sources */,
@@ -5000,6 +5007,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450168841F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */,
 				C820A8BC1EB4DA5A00D431BC /* SwitchIfEmpty.swift in Sources */,
 				C8093CCB1B8A72BE0088E94D /* ConnectableObservableType.swift in Sources */,
 				C820A8801EB4DA5A00D431BC /* Filter.swift in Sources */,
@@ -5262,6 +5270,7 @@
 				4501686A1F7BEE3400A96927 /* MyMainScheduler.swift in Sources */,
 				C84CC5651BDD037900E06A64 /* SynchronizedDisposeType.swift in Sources */,
 				C8F0BFC61BBBFB8B001B112F /* OperationQueueScheduler.swift in Sources */,
+				450168871F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */,
 				C85217EC1E3374970015DD38 /* GroupedObservable.swift in Sources */,
 				C820A93F1EB4DA5A00D431BC /* Zip+arity.swift in Sources */,
 				C8F0BFC91BBBFB8B001B112F /* DisposeBag.swift in Sources */,
@@ -5642,6 +5651,7 @@
 				450168691F7BEE3300A96927 /* MyMainScheduler.swift in Sources */,
 				C85217EB1E3374970015DD38 /* GroupedObservable.swift in Sources */,
 				D2EBEB3C1BB9B6D8003A27DC /* RecursiveScheduler.swift in Sources */,
+				450168861F7D2F6E00A96927 /* MyPublishSubject.swift in Sources */,
 				D2EBEAF61BB9B6B2003A27DC /* NopDisposable.swift in Sources */,
 				C820A93E1EB4DA5A00D431BC /* Zip+arity.swift in Sources */,
 				C81A09831E6C6B2500900B3B /* Deprecated.swift in Sources */,

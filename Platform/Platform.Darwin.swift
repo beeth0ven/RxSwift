@@ -21,7 +21,7 @@
         let raw = UnsafeMutableRawPointer(pointer)
         return raw.assumingMemoryBound(to: UInt32.self)
     }
-
+    
     let AtomicCompareAndSwap = OSAtomicCompareAndSwap32Barrier
     let AtomicIncrement = OSAtomicIncrement32Barrier
     let AtomicDecrement = OSAtomicDecrement32Barrier
