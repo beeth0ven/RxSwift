@@ -35,6 +35,30 @@
 		450168461F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
 		450168471F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
 		450168481F7949CF00A96927 /* MyPrimitiveSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */; };
+		450168671F7BEE3100A96927 /* MyMainScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168621F7BEC1700A96927 /* MyMainScheduler.swift */; };
+		450168681F7BEE3200A96927 /* MyMainScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168621F7BEC1700A96927 /* MyMainScheduler.swift */; };
+		450168691F7BEE3300A96927 /* MyMainScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168621F7BEC1700A96927 /* MyMainScheduler.swift */; };
+		4501686A1F7BEE3400A96927 /* MyMainScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168621F7BEC1700A96927 /* MyMainScheduler.swift */; };
+		4501686B1F7BEE4300A96927 /* MyDispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */; };
+		4501686C1F7BEE4400A96927 /* MyDispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */; };
+		4501686D1F7BEE4400A96927 /* MyDispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */; };
+		4501686E1F7BEE4500A96927 /* MyDispatchQueueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */; };
+		450168701F7BEE5F00A96927 /* MySchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168581F7BD90000A96927 /* MySchedulerType.swift */; };
+		450168711F7BEE6000A96927 /* MySchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168581F7BD90000A96927 /* MySchedulerType.swift */; };
+		450168721F7BEE6000A96927 /* MySchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168581F7BD90000A96927 /* MySchedulerType.swift */; };
+		450168731F7BEE6100A96927 /* MySchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168581F7BD90000A96927 /* MySchedulerType.swift */; };
+		450168761F7BEE7100A96927 /* MyImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */; };
+		450168771F7BEE7100A96927 /* MyImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */; };
+		450168781F7BEE7300A96927 /* MyImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */; };
+		450168791F7BEE7400A96927 /* MyImmediateSchedulerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */; };
+		4501687A1F7BEE8700A96927 /* MyOperationQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */; };
+		4501687B1F7BEE8800A96927 /* MyOperationQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */; };
+		4501687C1F7BEE8800A96927 /* MyOperationQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */; };
+		4501687D1F7BEE8900A96927 /* MyOperationQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */; };
+		4501687E1F7BEE9100A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
+		4501687F1F7BEE9200A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
+		450168801F7BEE9300A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
+		450168811F7BEE9400A96927 /* MySerialDispatchQueueScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */; };
 		4506F1971F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1981F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
 		4506F1991F6AC08200E8ED30 /* MyDelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */; };
@@ -1730,6 +1754,12 @@
 		4501683A1F77E99300A96927 /* MySharedSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharedSequence.swift; sourceTree = "<group>"; };
 		4501683F1F77EFBD00A96927 /* MyDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDriver.swift; sourceTree = "<group>"; };
 		450168441F7949CF00A96927 /* MyPrimitiveSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPrimitiveSequence.swift; sourceTree = "<group>"; };
+		450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImmediateSchedulerType.swift; sourceTree = "<group>"; };
+		4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOperationQueueScheduler.swift; sourceTree = "<group>"; };
+		450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDispatchQueueConfiguration.swift; sourceTree = "<group>"; };
+		450168581F7BD90000A96927 /* MySchedulerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchedulerType.swift; sourceTree = "<group>"; };
+		4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySerialDispatchQueueScheduler.swift; sourceTree = "<group>"; };
+		450168621F7BEC1700A96927 /* MyMainScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainScheduler.swift; sourceTree = "<group>"; };
 		4506F1961F6AC08200E8ED30 /* MyDelegateProxyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxyType.swift; sourceTree = "<group>"; };
 		4506F19B1F6C14C100E8ED30 /* MyDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDelegateProxy.swift; sourceTree = "<group>"; };
 		4506F1A01F6E556000E8ED30 /* MyScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -2382,6 +2412,7 @@
 				C8093C631B8A72BE0088E94D /* Errors.swift */,
 				C8093C641B8A72BE0088E94D /* Event.swift */,
 				C8093C651B8A72BE0088E94D /* ImmediateSchedulerType.swift */,
+				450168491F7BD3B700A96927 /* MyImmediateSchedulerType.swift */,
 				C8093C681B8A72BE0088E94D /* Observable.swift */,
 				C8093C671B8A72BE0088E94D /* ObservableType+Extensions.swift */,
 				C849BE2A1BAB5D070019AD27 /* ObservableConvertibleType.swift */,
@@ -2392,6 +2423,7 @@
 				C8093CAF1B8A72BE0088E94D /* Rx.swift */,
 				C8093CB01B8A72BE0088E94D /* RxMutableBox.swift */,
 				C8093CB31B8A72BE0088E94D /* SchedulerType.swift */,
+				450168581F7BD90000A96927 /* MySchedulerType.swift */,
 				C8BF34C81C2E426800416CAE /* Platform */,
 				C8093C4A1B8A72BE0088E94D /* Concurrency */,
 				C8093C531B8A72BE0088E94D /* Disposables */,
@@ -2537,10 +2569,13 @@
 				C8C3DA0E1B939767004D233E /* CurrentThreadScheduler.swift */,
 				C8B144FF1BD2D80100267DCE /* ImmediateScheduler.swift */,
 				C8093CB71B8A72BE0088E94D /* MainScheduler.swift */,
+				450168621F7BEC1700A96927 /* MyMainScheduler.swift */,
 				C8093CB81B8A72BE0088E94D /* OperationQueueScheduler.swift */,
+				4501684E1F7BD44200A96927 /* MyOperationQueueScheduler.swift */,
 				C8093CB91B8A72BE0088E94D /* RecursiveScheduler.swift */,
 				C8093CBB1B8A72BE0088E94D /* SchedulerServices+Emulation.swift */,
 				C8093CBC1B8A72BE0088E94D /* SerialDispatchQueueScheduler.swift */,
+				4501685D1F7BE70E00A96927 /* MySerialDispatchQueueScheduler.swift */,
 				C8FA89121C30405400CD3A17 /* VirtualTimeConverterType.swift */,
 				C8FA89131C30405400CD3A17 /* VirtualTimeScheduler.swift */,
 				C8FA89161C30409900CD3A17 /* HistoricalScheduler.swift */,
@@ -2858,6 +2893,7 @@
 				C83D73B61C1DBAEE003DC470 /* ScheduledItem.swift */,
 				C83D73B71C1DBAEE003DC470 /* ScheduledItemType.swift */,
 				C80EEC331D42D06E00131C39 /* DispatchQueueConfiguration.swift */,
+				450168531F7BD81C00A96927 /* MyDispatchQueueConfiguration.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -4748,6 +4784,7 @@
 				C8093D6A1B8A72BE0088E94D /* AnyObserver.swift in Sources */,
 				C820A9191EB4DA5A00D431BC /* AsMaybe.swift in Sources */,
 				C8B144FC1BD2D44500267DCE /* ConcurrentMainScheduler.swift in Sources */,
+				4501686C1F7BEE4400A96927 /* MyDispatchQueueConfiguration.swift in Sources */,
 				C820A8CD1EB4DA5A00D431BC /* Optional.swift in Sources */,
 				0BA949681E224B7E0036DD06 /* AsyncSubject.swift in Sources */,
 				C8FA89181C30409900CD3A17 /* HistoricalScheduler.swift in Sources */,
@@ -4766,6 +4803,7 @@
 				C820A8791EB4DA5A00D431BC /* TakeLast.swift in Sources */,
 				C8093CFC1B8A72BE0088E94D /* ObservableType+Extensions.swift in Sources */,
 				C8B145011BD2D80100267DCE /* ImmediateScheduler.swift in Sources */,
+				4501687B1F7BEE8800A96927 /* MyOperationQueueScheduler.swift in Sources */,
 				C820A8ED1EB4DA5A00D431BC /* Never.swift in Sources */,
 				C820A8991EB4DA5A00D431BC /* Catch.swift in Sources */,
 				C83D73C11C1DBAEE003DC470 /* InvocableType.swift in Sources */,
@@ -4776,6 +4814,7 @@
 				C85106891C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D01C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				C820A8511EB4DA5900D431BC /* Timer.swift in Sources */,
+				4501687F1F7BEE9200A96927 /* MySerialDispatchQueueScheduler.swift in Sources */,
 				C8A53AE11F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C8FA89221C30424100CD3A17 /* VirtualTimeConverterType.swift in Sources */,
 				C8F03F4B1DBBAC0A00AECC4C /* DispatchQueue+Extensions.swift in Sources */,
@@ -4810,6 +4849,7 @@
 				C8093DA81B8A72BE0088E94D /* Variable.swift in Sources */,
 				C820A8391EB4DA5900D431BC /* Timeout.swift in Sources */,
 				C820A8711EB4DA5A00D431BC /* Merge.swift in Sources */,
+				450168681F7BEE3200A96927 /* MyMainScheduler.swift in Sources */,
 				C84CC5631BDD037900E06A64 /* SynchronizedDisposeType.swift in Sources */,
 				C8093D961B8A72BE0088E94D /* OperationQueueScheduler.swift in Sources */,
 				C85217EA1E3374970015DD38 /* GroupedObservable.swift in Sources */,
@@ -4842,7 +4882,9 @@
 				C8093CF41B8A72BE0088E94D /* Errors.swift in Sources */,
 				C820A8D11EB4DA5A00D431BC /* Sequence.swift in Sources */,
 				C820A8E11EB4DA5A00D431BC /* Deferred.swift in Sources */,
+				450168771F7BEE7100A96927 /* MyImmediateSchedulerType.swift in Sources */,
 				C820A8AD1EB4DA5A00D431BC /* Amb.swift in Sources */,
+				450168711F7BEE6000A96927 /* MySchedulerType.swift in Sources */,
 				C820A8551EB4DA5900D431BC /* Sample.swift in Sources */,
 				C8845AD51EDB4C9900B36836 /* ShareReplayScope.swift in Sources */,
 				C86781791DB8129E00B2029A /* PriorityQueue.swift in Sources */,
@@ -4988,10 +5030,12 @@
 				C8093D871B8A72BE0088E94D /* RxMutableBox.swift in Sources */,
 				C8093D931B8A72BE0088E94D /* MainScheduler.swift in Sources */,
 				C820A8481EB4DA5900D431BC /* Skip.swift in Sources */,
+				450168671F7BEE3100A96927 /* MyMainScheduler.swift in Sources */,
 				C820A8D81EB4DA5A00D431BC /* Using.swift in Sources */,
 				C8550B4B1D95A41400A6FCFE /* Reactive.swift in Sources */,
 				CB883B451BE256D4000AC2EE /* BooleanDisposable.swift in Sources */,
 				C820A9241EB4DA5A00D431BC /* CombineLatest.swift in Sources */,
+				4501687E1F7BEE9100A96927 /* MySerialDispatchQueueScheduler.swift in Sources */,
 				C86781881DB814AD00B2029A /* Bag+Rx.swift in Sources */,
 				C820A8881EB4DA5A00D431BC /* Materialize.swift in Sources */,
 				C820A9201EB4DA5A00D431BC /* AddRef.swift in Sources */,
@@ -5008,6 +5052,7 @@
 				C820A9141EB4DA5A00D431BC /* ToArray.swift in Sources */,
 				C820A8741EB4DA5A00D431BC /* SkipWhile.swift in Sources */,
 				C820A91C1EB4DA5A00D431BC /* AsSingle.swift in Sources */,
+				450168761F7BEE7100A96927 /* MyImmediateSchedulerType.swift in Sources */,
 				C8BF34CF1C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				451E6E691F62E28F0035264A /* MyCombineLatest+Collection.swift in Sources */,
 				C8093D791B8A72BE0088E94D /* TailRecursiveSink.swift in Sources */,
@@ -5025,6 +5070,7 @@
 				CB883B401BE24C15000AC2EE /* RefCountDisposable.swift in Sources */,
 				C84CC54E1BDCF48200E06A64 /* LockOwnerType.swift in Sources */,
 				C8FA89151C30405400CD3A17 /* VirtualTimeScheduler.swift in Sources */,
+				4501687A1F7BEE8700A96927 /* MyOperationQueueScheduler.swift in Sources */,
 				C84CC5531BDCF49300E06A64 /* SynchronizedOnType.swift in Sources */,
 				C820A8601EB4DA5A00D431BC /* Generate.swift in Sources */,
 				C8C3DA0F1B939767004D233E /* CurrentThreadScheduler.swift in Sources */,
@@ -5093,8 +5139,10 @@
 				C8093CDB1B8A72BE0088E94D /* CompositeDisposable.swift in Sources */,
 				C8093D7D1B8A72BE0088E94D /* ObserverType.swift in Sources */,
 				C820A8F01EB4DA5A00D431BC /* Empty.swift in Sources */,
+				4501686B1F7BEE4300A96927 /* MyDispatchQueueConfiguration.swift in Sources */,
 				C8093CFD1B8A72BE0088E94D /* Observable.swift in Sources */,
 				C84CC55D1BDD010800E06A64 /* SynchronizedUnsubscribeType.swift in Sources */,
+				450168701F7BEE5F00A96927 /* MySchedulerType.swift in Sources */,
 				C8093CEB1B8A72BE0088E94D /* SerialDisposable.swift in Sources */,
 				C820A9101EB4DA5A00D431BC /* Reduce.swift in Sources */,
 				C820A8641EB4DA5A00D431BC /* GroupBy.swift in Sources */,
@@ -5146,6 +5194,7 @@
 				C8F0BF9A1BBBFB8B001B112F /* AnyObserver.swift in Sources */,
 				C820A91B1EB4DA5A00D431BC /* AsMaybe.swift in Sources */,
 				C8B144FE1BD2D44500267DCE /* ConcurrentMainScheduler.swift in Sources */,
+				4501686E1F7BEE4500A96927 /* MyDispatchQueueConfiguration.swift in Sources */,
 				C820A8CF1EB4DA5A00D431BC /* Optional.swift in Sources */,
 				0BA9496A1E224B7E0036DD06 /* AsyncSubject.swift in Sources */,
 				C8FA891A1C30409900CD3A17 /* HistoricalScheduler.swift in Sources */,
@@ -5164,6 +5213,7 @@
 				C820A87B1EB4DA5A00D431BC /* TakeLast.swift in Sources */,
 				C8F0BFA91BBBFB8B001B112F /* ObservableType+Extensions.swift in Sources */,
 				C8B145031BD2D80100267DCE /* ImmediateScheduler.swift in Sources */,
+				4501687D1F7BEE8900A96927 /* MyOperationQueueScheduler.swift in Sources */,
 				C820A8EF1EB4DA5A00D431BC /* Never.swift in Sources */,
 				C820A89B1EB4DA5A00D431BC /* Catch.swift in Sources */,
 				C83D73C31C1DBAEE003DC470 /* InvocableType.swift in Sources */,
@@ -5174,6 +5224,7 @@
 				C851068B1C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D21C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				C820A8531EB4DA5900D431BC /* Timer.swift in Sources */,
+				450168811F7BEE9400A96927 /* MySerialDispatchQueueScheduler.swift in Sources */,
 				C8A53AE31F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C8FA89201C30424000CD3A17 /* VirtualTimeConverterType.swift in Sources */,
 				C8F03F4D1DBBAC0A00AECC4C /* DispatchQueue+Extensions.swift in Sources */,
@@ -5208,6 +5259,7 @@
 				C8F0BFC51BBBFB8B001B112F /* Variable.swift in Sources */,
 				C820A83B1EB4DA5900D431BC /* Timeout.swift in Sources */,
 				C820A8731EB4DA5A00D431BC /* Merge.swift in Sources */,
+				4501686A1F7BEE3400A96927 /* MyMainScheduler.swift in Sources */,
 				C84CC5651BDD037900E06A64 /* SynchronizedDisposeType.swift in Sources */,
 				C8F0BFC61BBBFB8B001B112F /* OperationQueueScheduler.swift in Sources */,
 				C85217EC1E3374970015DD38 /* GroupedObservable.swift in Sources */,
@@ -5240,7 +5292,9 @@
 				C8F0BFE81BBBFB8B001B112F /* Errors.swift in Sources */,
 				C820A8D31EB4DA5A00D431BC /* Sequence.swift in Sources */,
 				C820A8E31EB4DA5A00D431BC /* Deferred.swift in Sources */,
+				450168791F7BEE7400A96927 /* MyImmediateSchedulerType.swift in Sources */,
 				C820A8AF1EB4DA5A00D431BC /* Amb.swift in Sources */,
+				450168731F7BEE6100A96927 /* MySchedulerType.swift in Sources */,
 				C820A8571EB4DA5900D431BC /* Sample.swift in Sources */,
 				C8845AD71EDB4C9900B36836 /* ShareReplayScope.swift in Sources */,
 				C867817B1DB8129E00B2029A /* PriorityQueue.swift in Sources */,
@@ -5520,6 +5574,7 @@
 				C80DA33A1C30B20B00C588B9 /* VirtualTimeScheduler.swift in Sources */,
 				C820A91A1EB4DA5A00D431BC /* AsMaybe.swift in Sources */,
 				D2EBEAF11BB9B6AE003A27DC /* BinaryDisposable.swift in Sources */,
+				4501686D1F7BEE4400A96927 /* MyDispatchQueueConfiguration.swift in Sources */,
 				C820A8CE1EB4DA5A00D431BC /* Optional.swift in Sources */,
 				C8B144FD1BD2D44500267DCE /* ConcurrentMainScheduler.swift in Sources */,
 				0BA949691E224B7E0036DD06 /* AsyncSubject.swift in Sources */,
@@ -5538,6 +5593,7 @@
 				C820A87A1EB4DA5A00D431BC /* TakeLast.swift in Sources */,
 				CB883B471BE256D4000AC2EE /* BooleanDisposable.swift in Sources */,
 				D2EBEB341BB9B6D2003A27DC /* AnonymousObserver.swift in Sources */,
+				4501687C1F7BEE8800A96927 /* MyOperationQueueScheduler.swift in Sources */,
 				C820A8EE1EB4DA5A00D431BC /* Never.swift in Sources */,
 				C820A89A1EB4DA5A00D431BC /* Catch.swift in Sources */,
 				D2EBEB421BB9B6DE003A27DC /* ReplaySubject.swift in Sources */,
@@ -5548,6 +5604,7 @@
 				C8B145021BD2D80100267DCE /* ImmediateScheduler.swift in Sources */,
 				C83D73C21C1DBAEE003DC470 /* InvocableType.swift in Sources */,
 				C820A8521EB4DA5900D431BC /* Timer.swift in Sources */,
+				450168801F7BEE9300A96927 /* MySerialDispatchQueueScheduler.swift in Sources */,
 				C8A53AE21F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C851068A1C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D11C2E426800416CAE /* Platform.Linux.swift in Sources */,
@@ -5582,6 +5639,7 @@
 				D2EBEAEC1BB9B69E003A27DC /* Lock.swift in Sources */,
 				C820A83A1EB4DA5900D431BC /* Timeout.swift in Sources */,
 				C820A8721EB4DA5A00D431BC /* Merge.swift in Sources */,
+				450168691F7BEE3300A96927 /* MyMainScheduler.swift in Sources */,
 				C85217EB1E3374970015DD38 /* GroupedObservable.swift in Sources */,
 				D2EBEB3C1BB9B6D8003A27DC /* RecursiveScheduler.swift in Sources */,
 				D2EBEAF61BB9B6B2003A27DC /* NopDisposable.swift in Sources */,
@@ -5614,7 +5672,9 @@
 				C867817A1DB8129E00B2029A /* PriorityQueue.swift in Sources */,
 				C820A8D21EB4DA5A00D431BC /* Sequence.swift in Sources */,
 				C820A8E21EB4DA5A00D431BC /* Deferred.swift in Sources */,
+				450168781F7BEE7300A96927 /* MyImmediateSchedulerType.swift in Sources */,
 				C820A8AE1EB4DA5A00D431BC /* Amb.swift in Sources */,
+				450168721F7BEE6000A96927 /* MySchedulerType.swift in Sources */,
 				C820A8561EB4DA5900D431BC /* Sample.swift in Sources */,
 				C8845AD61EDB4C9900B36836 /* ShareReplayScope.swift in Sources */,
 				D2EBEAFA1BB9B6B2003A27DC /* SingleAssignmentDisposable.swift in Sources */,
