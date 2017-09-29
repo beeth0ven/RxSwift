@@ -90,6 +90,10 @@
 		451E6E6B1F63BABF0035264A /* Observable+MyCombineLatestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */; };
 		451E6E6C1F63BABF0035264A /* Observable+MyCombineLatestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */; };
 		451E6E6D1F63BABF0035264A /* Observable+MyCombineLatestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */; };
+		4572C6BD1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
+		4572C6BE1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
+		4572C6BF1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
+		4572C6C01F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
 		45CD9C4E1F5EE07F00A91A30 /* MyWithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */; };
 		4613456F1D9A4467001ABAF2 /* UIWebView+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */; };
 		461345711D9A4543001ABAF2 /* UIWebView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */; };
@@ -1773,6 +1777,7 @@
 		451E6E631F603C870035264A /* Observable+MyWithLatestFromTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyWithLatestFromTests.swift"; sourceTree = "<group>"; };
 		451E6E681F62E28F0035264A /* MyCombineLatest+Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyCombineLatest+Collection.swift"; sourceTree = "<group>"; };
 		451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyCombineLatestTests.swift"; sourceTree = "<group>"; };
+		4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBehaviorSubject.swift; sourceTree = "<group>"; };
 		45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWithLatestFrom.swift; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
 		461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Rx.swift"; sourceTree = "<group>"; };
@@ -2594,6 +2599,7 @@
 			children = (
 				0BA949661E224B7E0036DD06 /* AsyncSubject.swift */,
 				C8093CBE1B8A72BE0088E94D /* BehaviorSubject.swift */,
+				4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */,
 				C8093CBF1B8A72BE0088E94D /* PublishSubject.swift */,
 				450168831F7D2F6E00A96927 /* MyPublishSubject.swift */,
 				C8093CC01B8A72BE0088E94D /* ReplaySubject.swift */,
@@ -4771,6 +4777,7 @@
 				C83D73BD1C1DBAEE003DC470 /* InvocableScheduledItem.swift in Sources */,
 				C8093CE61B8A72BE0088E94D /* NopDisposable.swift in Sources */,
 				C89814791E75A7E70035949C /* PrimitiveSequence+Zip+arity.swift in Sources */,
+				4572C6BE1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */,
 				C86781751DB8129E00B2029A /* InfiniteSequence.swift in Sources */,
 				C820A8A51EB4DA5A00D431BC /* DistinctUntilChanged.swift in Sources */,
 				C8093CD41B8A72BE0088E94D /* Disposable.swift in Sources */,
@@ -5042,6 +5049,7 @@
 				C820A8D81EB4DA5A00D431BC /* Using.swift in Sources */,
 				C8550B4B1D95A41400A6FCFE /* Reactive.swift in Sources */,
 				CB883B451BE256D4000AC2EE /* BooleanDisposable.swift in Sources */,
+				4572C6BD1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */,
 				C820A9241EB4DA5A00D431BC /* CombineLatest.swift in Sources */,
 				4501687E1F7BEE9100A96927 /* MySerialDispatchQueueScheduler.swift in Sources */,
 				C86781881DB814AD00B2029A /* Bag+Rx.swift in Sources */,
@@ -5183,6 +5191,7 @@
 				C83D73BF1C1DBAEE003DC470 /* InvocableScheduledItem.swift in Sources */,
 				C8F0BF951BBBFB8B001B112F /* NopDisposable.swift in Sources */,
 				C898147B1E75A7E80035949C /* PrimitiveSequence+Zip+arity.swift in Sources */,
+				4572C6C01F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */,
 				C86781771DB8129E00B2029A /* InfiniteSequence.swift in Sources */,
 				C820A8A71EB4DA5A00D431BC /* DistinctUntilChanged.swift in Sources */,
 				C8F0BF961BBBFB8B001B112F /* Disposable.swift in Sources */,
@@ -5564,6 +5573,7 @@
 				C83D73BE1C1DBAEE003DC470 /* InvocableScheduledItem.swift in Sources */,
 				D2EBEAF01BB9B6AE003A27DC /* AnonymousDisposable.swift in Sources */,
 				D2EBEAEB1BB9B69E003A27DC /* AsyncLock.swift in Sources */,
+				4572C6BF1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */,
 				C898147A1E75A7E80035949C /* PrimitiveSequence+Zip+arity.swift in Sources */,
 				C820A8A61EB4DA5A00D431BC /* DistinctUntilChanged.swift in Sources */,
 				C86781761DB8129E00B2029A /* InfiniteSequence.swift in Sources */,
