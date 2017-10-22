@@ -98,6 +98,10 @@
 		454976111F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4549760F1F98E64E00FE1F1E /* MyInfiniteSequence.swift */; };
 		454976121F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4549760F1F98E64E00FE1F1E /* MyInfiniteSequence.swift */; };
 		454976131F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4549760F1F98E64E00FE1F1E /* MyInfiniteSequence.swift */; };
+		454976171F9B301A00FE1F1E /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454976161F9B301A00FE1F1E /* MyQueue.swift */; };
+		454976181F9B301A00FE1F1E /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454976161F9B301A00FE1F1E /* MyQueue.swift */; };
+		454976191F9B301A00FE1F1E /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454976161F9B301A00FE1F1E /* MyQueue.swift */; };
+		4549761A1F9B301A00FE1F1E /* MyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454976161F9B301A00FE1F1E /* MyQueue.swift */; };
 		4572C6BD1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
 		4572C6BE1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
 		4572C6BF1F7E7E0000F711D3 /* MyBehaviorSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */; };
@@ -1787,6 +1791,7 @@
 		451E6E6A1F63BABF0035264A /* Observable+MyCombineLatestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+MyCombineLatestTests.swift"; sourceTree = "<group>"; };
 		4549760A1F98E62800FE1F1E /* MyBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBag.swift; sourceTree = "<group>"; };
 		4549760F1F98E64E00FE1F1E /* MyInfiniteSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfiniteSequence.swift; sourceTree = "<group>"; };
+		454976161F9B301A00FE1F1E /* MyQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQueue.swift; sourceTree = "<group>"; };
 		4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBehaviorSubject.swift; sourceTree = "<group>"; };
 		45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWithLatestFrom.swift; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
@@ -2971,6 +2976,7 @@
 				4549760F1F98E64E00FE1F1E /* MyInfiniteSequence.swift */,
 				C867816E1DB8129E00B2029A /* PriorityQueue.swift */,
 				C867816F1DB8129E00B2029A /* Queue.swift */,
+				454976161F9B301A00FE1F1E /* MyQueue.swift */,
 			);
 			path = DataStructures;
 			sourceTree = "<group>";
@@ -4865,6 +4871,7 @@
 				C820A87D1EB4DA5A00D431BC /* TakeWhile.swift in Sources */,
 				C8093DA61B8A72BE0088E94D /* SubjectType.swift in Sources */,
 				C8093D6C1B8A72BE0088E94D /* AnonymousObserver.swift in Sources */,
+				454976181F9B301A00FE1F1E /* MyQueue.swift in Sources */,
 				C8093DA21B8A72BE0088E94D /* PublishSubject.swift in Sources */,
 				C820A8C51EB4DA5A00D431BC /* CombineLatest+Collection.swift in Sources */,
 				C820A9311EB4DA5A00D431BC /* Producer.swift in Sources */,
@@ -5047,6 +5054,7 @@
 				C820A8301EB4DA5900D431BC /* Switch.swift in Sources */,
 				C820A8B41EB4DA5A00D431BC /* TakeUntil.swift in Sources */,
 				C80EEC341D42D06E00131C39 /* DispatchQueueConfiguration.swift in Sources */,
+				454976171F9B301A00FE1F1E /* MyQueue.swift in Sources */,
 				C820A8841EB4DA5A00D431BC /* Dematerialize.swift in Sources */,
 				C820A8941EB4DA5A00D431BC /* RetryWhen.swift in Sources */,
 				C820A8441EB4DA5900D431BC /* DelaySubscription.swift in Sources */,
@@ -5283,6 +5291,7 @@
 				C820A87F1EB4DA5A00D431BC /* TakeWhile.swift in Sources */,
 				C8F0BFBE1BBBFB8B001B112F /* SubjectType.swift in Sources */,
 				C8F0BFC11BBBFB8B001B112F /* AnonymousObserver.swift in Sources */,
+				4549761A1F9B301A00FE1F1E /* MyQueue.swift in Sources */,
 				C8F0BFC21BBBFB8B001B112F /* PublishSubject.swift in Sources */,
 				C820A8C71EB4DA5A00D431BC /* CombineLatest+Collection.swift in Sources */,
 				C820A9331EB4DA5A00D431BC /* Producer.swift in Sources */,
@@ -5667,6 +5676,7 @@
 				C820A87E1EB4DA5A00D431BC /* TakeWhile.swift in Sources */,
 				D2EBEB351BB9B6D2003A27DC /* ObserverBase.swift in Sources */,
 				D2EBEADE1BB9B697003A27DC /* Disposable.swift in Sources */,
+				454976191F9B301A00FE1F1E /* MyQueue.swift in Sources */,
 				D2EBEAE61BB9B697003A27DC /* ObserverType.swift in Sources */,
 				C820A8C61EB4DA5A00D431BC /* CombineLatest+Collection.swift in Sources */,
 				C820A9321EB4DA5A00D431BC /* Producer.swift in Sources */,
