@@ -111,6 +111,10 @@
 		45E3A98F1F9F8802005D625B /* MyDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A98D1F9F8802005D625B /* MyDisposeBag.swift */; };
 		45E3A9901F9F8802005D625B /* MyDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A98D1F9F8802005D625B /* MyDisposeBag.swift */; };
 		45E3A9911F9F8802005D625B /* MyDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A98D1F9F8802005D625B /* MyDisposeBag.swift */; };
+		45E3A9931FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */; };
+		45E3A9941FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */; };
+		45E3A9951FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */; };
+		45E3A9961FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */; };
 		4613456F1D9A4467001ABAF2 /* UIWebView+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */; };
 		461345711D9A4543001ABAF2 /* UIWebView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */; };
 		4613457C1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613457B1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift */; };
@@ -1799,6 +1803,7 @@
 		4572C6BC1F7E7E0000F711D3 /* MyBehaviorSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBehaviorSubject.swift; sourceTree = "<group>"; };
 		45CD9C4D1F5EE07F00A91A30 /* MyWithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWithLatestFrom.swift; sourceTree = "<group>"; };
 		45E3A98D1F9F8802005D625B /* MyDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDisposeBag.swift; sourceTree = "<group>"; };
+		45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCompositeDisposable.swift; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
 		461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Rx.swift"; sourceTree = "<group>"; };
 		4613457B1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxWebViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -2490,6 +2495,7 @@
 				C8093C551B8A72BE0088E94D /* BinaryDisposable.swift */,
 				CB883B441BE256D4000AC2EE /* BooleanDisposable.swift */,
 				C8093C571B8A72BE0088E94D /* CompositeDisposable.swift */,
+				45E3A9921FA0D3A4005D625B /* MyCompositeDisposable.swift */,
 				C8093C581B8A72BE0088E94D /* DisposeBag.swift */,
 				45E3A98D1F9F8802005D625B /* MyDisposeBag.swift */,
 				C8093C591B8A72BE0088E94D /* DisposeBase.swift */,
@@ -4933,6 +4939,7 @@
 				C820A85D1EB4DA5A00D431BC /* Throttle.swift in Sources */,
 				C8BF34CC1C2E426800416CAE /* Platform.Darwin.swift in Sources */,
 				C8093CC61B8A72BE0088E94D /* Cancelable.swift in Sources */,
+				45E3A9941FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */,
 				454976111F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */,
 				C8093CE81B8A72BE0088E94D /* ScheduledDisposable.swift in Sources */,
 				45E3A98F1F9F8802005D625B /* MyDisposeBag.swift in Sources */,
@@ -5191,6 +5198,7 @@
 				450168701F7BEE5F00A96927 /* MySchedulerType.swift in Sources */,
 				C8093CEB1B8A72BE0088E94D /* SerialDisposable.swift in Sources */,
 				45E3A98E1F9F8802005D625B /* MyDisposeBag.swift in Sources */,
+				45E3A9931FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */,
 				C820A9101EB4DA5A00D431BC /* Reduce.swift in Sources */,
 				C820A8641EB4DA5A00D431BC /* GroupBy.swift in Sources */,
 				C84CC5671BDD08A500E06A64 /* SubscriptionDisposable.swift in Sources */,
@@ -5355,6 +5363,7 @@
 				C820A85F1EB4DA5A00D431BC /* Throttle.swift in Sources */,
 				C8BF34CE1C2E426800416CAE /* Platform.Darwin.swift in Sources */,
 				C8F0BFED1BBBFB8B001B112F /* Cancelable.swift in Sources */,
+				45E3A9961FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */,
 				454976131F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */,
 				C8F0BFEE1BBBFB8B001B112F /* ScheduledDisposable.swift in Sources */,
 				45E3A9911F9F8802005D625B /* MyDisposeBag.swift in Sources */,
@@ -5741,6 +5750,7 @@
 				C820A85E1EB4DA5A00D431BC /* Throttle.swift in Sources */,
 				C8BF34CD1C2E426800416CAE /* Platform.Darwin.swift in Sources */,
 				D2EBEAE01BB9B697003A27DC /* Event.swift in Sources */,
+				45E3A9951FA0D3A4005D625B /* MyCompositeDisposable.swift in Sources */,
 				454976121F98E64E00FE1F1E /* MyInfiniteSequence.swift in Sources */,
 				D2EBEB411BB9B6DE003A27DC /* PublishSubject.swift in Sources */,
 				45E3A9901F9F8802005D625B /* MyDisposeBag.swift in Sources */,
