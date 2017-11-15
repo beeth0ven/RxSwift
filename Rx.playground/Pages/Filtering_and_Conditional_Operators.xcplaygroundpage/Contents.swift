@@ -125,7 +125,7 @@ example("takeLast") {
 example("takeWhile") {
     let disposeBag = DisposeBag()
     
-    Observable.of(1, 2, 3, 4, 5, 6)
+    Observable.of(1, 2, 3, 4, 3, 2)
         .takeWhile { $0 < 4 }
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)

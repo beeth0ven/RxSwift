@@ -43,6 +43,23 @@ example("debug") {
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
 }
+
+example("debug") {
+    let disposeBag = DisposeBag()
+    
+    let sequence = Observable<String>.create { observer in
+        observer.onNext("🍎")
+        observer.onNext("🍐")
+        observer.onCompleted()
+        
+        return Disposables.create()
+    }
+    
+    sequence
+        .debug("Fruit")
+        .subscribe()
+        .disposed(by: disposeBag)
+}
 /*:
  ----
  ## `RxSwift.Resources.total`
@@ -81,3 +98,4 @@ print(RxSwift.Resources.total)
 //: > `RxSwift.Resources.total` is not enabled by default, and should generally not be enabled in Release builds. [Click here](Enable_RxSwift.Resources.total) for instructions on how to enable it.
 
 //: [Next](@next) - [Table of Contents](Table_of_Contents)
+

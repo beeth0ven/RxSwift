@@ -45,7 +45,7 @@ final fileprivate class FilterSink<O : ObserverType>: Sink<O>, ObserverType {
     
     private let _predicate: Predicate
     
-    init(predicate: @escaping Predicate, observer: O, cancel: Cancelable) {
+    init(predicate: @escaping Predicate, observer: O,    : Cancelable) {
         _predicate = predicate
         super.init(observer: observer, cancel: cancel)
     }

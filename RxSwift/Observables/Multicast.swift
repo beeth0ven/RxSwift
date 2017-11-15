@@ -23,6 +23,7 @@ public class ConnectableObservable<Element>
     }
 }
 
+
 extension ObservableType {
     
     /**

@@ -29,6 +29,24 @@ func writeSequenceToConsole<O: ObservableType>(name: String, sequence: O) -> Dis
         print("Subscription: \(name), event: \(event)")
     }
 }
+example("AsyncSubject") {
+    let disposeBag = DisposeBag()
+    let subject = AsyncSubject<String>()
+    
+    subject.addObserver("1").disposed(by: disposeBag)
+    subject.onNext("🐶")
+    subject.onNext("🐱")
+    subject.onNext("🐹")
+    subject.onCompleted()
+}
+/*:
+ > This example also introduces using the `onNext(_:)` convenience method, equivalent to `on(.next(_:)`, which causes a new Next event to be emitted to subscribers with the provided `element`. There are also `onError(_:)` and `onCompleted()` convenience methods, equivalent to `on(.error(_:))` and `on(.completed)`, respectively.
+ ----
+ ## ReplaySubject
+ Broadcasts new events to all subscribers, and the specified `bufferSize` number of previous events to new subscribers.
+ ![](https://raw.githubusercontent.com/kzaher/rxswiftcontent/master/MarbleDiagrams/png/replaysubject.png)
+ */
+
 /*:
  ## PublishSubject
  Broadcasts new events to all observers as of their time of the subscription.

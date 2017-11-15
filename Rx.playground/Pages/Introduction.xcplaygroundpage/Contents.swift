@@ -10,6 +10,9 @@
 
 import RxSwift
 
+import PlaygroundSupport
+
+PlaygroundPage.current.needsIndefiniteExecution = true
 /*:
 # Introduction
 
@@ -66,15 +69,47 @@ example("Observable with no subscribers") {
  In the following example, the closure will be executed when `subscribe(_:)` is called:
  */
 example("Observable with subscriber") {
-  _ = Observable<String>.create { observerOfString in
-            print("Observable created")
-            observerOfString.on(.next("😉"))
-            observerOfString.on(.completed)
-            return Disposables.create()
+//  _ = Observable<String>.create { observerOfString in
+//            print("Observable created")
+//            observerOfString.on(.next("😉"))
+//            observerOfString.on(.completed)
+//            return Disposables.create()
+//        }
+//        .subscribe { event in
+//            print(event)
+//    }
+    
+    let source = Observable<String>.create { observer in
+//        print("$: subscribeOn:", Thread.current.description)
+        observer.on(.next("0"))
+        observer.on(.next("1"))
+        observer.on(.next("2"))
+        observer.on(.completed)
+        observer.on(.next("3"))
+        return Disposables.create {
+            print("$: Dispose")
+//            print("$:", Thread.current.description)
         }
-        .subscribe { event in
-            print(event)
     }
+    
+    let observer = AnyObserver<String> { event in
+        switch event {
+        case .next(let element):
+            print("$: next:", element)
+        case .error(let error):
+            print("$: error:", error)
+        case .completed:
+            print("$: completed")
+        }
+//        print("$:", Thread.current.description)
+    }
+    
+    let disposable = source
+        .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated))
+//        .debug("userInitiated")
+        .observeOn(ConcurrentDispatchQueueScheduler(qos: .utility))
+//        .debug("utility")
+        .subscribe(observer)
 }
 /*:
  > Don't concern yourself with the details of how these `Observable`s were created in these examples. We'll get into that [next](@next).
