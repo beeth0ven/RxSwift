@@ -170,6 +170,30 @@ public func XCTAssertEqual<T: Equatable>(_ lhs: [Recorded<Event<T?>>], _ rhs: [R
     printSequenceDifferences(lhs, rhs, ==)
 }
 
+#if os(Linux)
+    import Dispatch
+    /**
+     Without this method will casue an error when running test on Linux:
+     
+     …/RxSwift/Sources/AllTestz/DispatchTimeConverterTest.swift:47:9: error: cannot invoke 'XCTAssertEqual' with an argument list of type '([DispatchTimeInterval], [DispatchTimeInterval])'
+     XCTAssertEqual(dispatchIntervals, correct)
+     ^
+     
+     */
+    public func XCTAssertEqual(_ lhs: [DispatchTimeInterval], _ rhs: [DispatchTimeInterval]) {
+        let leftEquatable = lhs.map { AnyEquatable(target: $0, comparer: ==) }
+        let rightEquatable = rhs.map { AnyEquatable(target: $0, comparer: ==) }
+        
+        XCTAssertEqual(leftEquatable, rightEquatable)
+        
+        if leftEquatable == rightEquatable {
+            return
+        }
+        
+        printSequenceDifferences(lhs, rhs, ==)
+    }
+#endif
+
 func printSequenceDifferences<E>(_ lhs: [E], _ rhs: [E], _ equal: (E, E) -> Bool) {
     print("Differences:")
     for (index, elements) in zip(lhs, rhs).enumerated() {
