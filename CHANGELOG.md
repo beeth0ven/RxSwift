@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 ---
 ## Master
 
+* Adds `DispatchTimeInterval` overloads to time based operator on `ObservableType` #1542:
+    * `interval`
+    * `timer`
 * Replaces global timeless functions `next`, `error`, `completed` with `Recorded.next`, `Recorded.error`, `Recorded.completed` in **Tests**. #1537
 
 #### Anomalies
