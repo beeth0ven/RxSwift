@@ -1544,21 +1544,21 @@ final class ObservableToArrayTest_ : ObservableToArrayTest, RxTestCase {
     ] }
 }
 
-final class ObserverTests_ : ObserverTests, RxTestCase {
+final class DispatchTimeConverterTest_ : DispatchTimeConverterTest, RxTestCase {
     #if os(macOS)
     required override init() {
         super.init()
     }
     #endif
 
-    static var allTests: [(String, (ObserverTests_) -> () -> ())] { return [
-    ("testConvenienceOn_Next", ObserverTests.testConvenienceOn_Next),
-    ("testConvenienceOn_Error", ObserverTests.testConvenienceOn_Error),
-    ("testConvenienceOn_Complete", ObserverTests.testConvenienceOn_Complete),
-    ("testMapElement", ObserverTests.testMapElement),
-    ("testMapElementCompleted", ObserverTests.testMapElementCompleted),
-    ("testMapElementError", ObserverTests.testMapElementError),
-    ("testMapElementThrow", ObserverTests.testMapElementThrow),
+    static var allTests: [(String, (DispatchTimeConverterTest_) -> () -> ())] { return [
+    ("testDispatchTimeInterval", DispatchTimeConverterTest.testDispatchTimeInterval),
+    ("testDispatchTimeInterval_random", DispatchTimeConverterTest.testDispatchTimeInterval_random),
+    ("testTimeInterval_seconds", DispatchTimeConverterTest.testTimeInterval_seconds),
+    ("testTimeInterval_milliseconds", DispatchTimeConverterTest.testTimeInterval_milliseconds),
+    ("testTimeInterval_microseconds", DispatchTimeConverterTest.testTimeInterval_microseconds),
+    ("testTimeInterval_nanoseconds", DispatchTimeConverterTest.testTimeInterval_nanoseconds),
+    ("testTimeInterval_never", DispatchTimeConverterTest.testTimeInterval_never),
     ] }
 }
 
@@ -1607,18 +1607,21 @@ final class ObservableTimeoutTest_ : ObservableTimeoutTest, RxTestCase {
     ] }
 }
 
-final class ConcurrentDispatchQueueSchedulerTests_ : ConcurrentDispatchQueueSchedulerTests, RxTestCase {
+final class ObserverTests_ : ObserverTests, RxTestCase {
     #if os(macOS)
     required override init() {
         super.init()
     }
     #endif
 
-    static var allTests: [(String, (ConcurrentDispatchQueueSchedulerTests_) -> () -> ())] { return [
-    ("test_scheduleRelative", ConcurrentDispatchQueueSchedulerTests.test_scheduleRelative),
-    ("test_scheduleRelativeCancel", ConcurrentDispatchQueueSchedulerTests.test_scheduleRelativeCancel),
-    ("test_schedulePeriodic", ConcurrentDispatchQueueSchedulerTests.test_schedulePeriodic),
-    ("test_schedulePeriodicCancel", ConcurrentDispatchQueueSchedulerTests.test_schedulePeriodicCancel),
+    static var allTests: [(String, (ObserverTests_) -> () -> ())] { return [
+    ("testConvenienceOn_Next", ObserverTests.testConvenienceOn_Next),
+    ("testConvenienceOn_Error", ObserverTests.testConvenienceOn_Error),
+    ("testConvenienceOn_Complete", ObserverTests.testConvenienceOn_Complete),
+    ("testMapElement", ObserverTests.testMapElement),
+    ("testMapElementCompleted", ObserverTests.testMapElementCompleted),
+    ("testMapElementError", ObserverTests.testMapElementError),
+    ("testMapElementThrow", ObserverTests.testMapElementThrow),
     ] }
 }
 
@@ -1801,6 +1804,21 @@ final class ObservableTakeUntilTest_ : ObservableTakeUntilTest, RxTestCase {
     ("testTakeUntil_Preempt_BeforeFirstProduced_RemainSilentAndProperDisposed", ObservableTakeUntilTest.testTakeUntil_Preempt_BeforeFirstProduced_RemainSilentAndProperDisposed),
     ("testTakeUntil_NoPreempt_AfterLastProduced_ProperDisposedSigna", ObservableTakeUntilTest.testTakeUntil_NoPreempt_AfterLastProduced_ProperDisposedSigna),
     ("testTakeUntil_Error_Some", ObservableTakeUntilTest.testTakeUntil_Error_Some),
+    ] }
+}
+
+final class ConcurrentDispatchQueueSchedulerTests_ : ConcurrentDispatchQueueSchedulerTests, RxTestCase {
+    #if os(macOS)
+    required override init() {
+        super.init()
+    }
+    #endif
+
+    static var allTests: [(String, (ConcurrentDispatchQueueSchedulerTests_) -> () -> ())] { return [
+    ("test_scheduleRelative", ConcurrentDispatchQueueSchedulerTests.test_scheduleRelative),
+    ("test_scheduleRelativeCancel", ConcurrentDispatchQueueSchedulerTests.test_scheduleRelativeCancel),
+    ("test_schedulePeriodic", ConcurrentDispatchQueueSchedulerTests.test_schedulePeriodic),
+    ("test_schedulePeriodicCancel", ConcurrentDispatchQueueSchedulerTests.test_schedulePeriodicCancel),
     ] }
 }
 
@@ -2007,10 +2025,10 @@ func XCTMain(_ tests: [() -> ()]) {
         testCase(ObservableSubscriptionTests_.allTests),
         testCase(ObservableCatchTest_.allTests),
         testCase(ObservableToArrayTest_.allTests),
-        testCase(ObserverTests_.allTests),
+        testCase(DispatchTimeConverterTest_.allTests),
         testCase(ObservableObserveOnTestConcurrentSchedulerTest_.allTests),
         testCase(ObservableTimeoutTest_.allTests),
-        testCase(ConcurrentDispatchQueueSchedulerTests_.allTests),
+        testCase(ObserverTests_.allTests),
         testCase(ObservableBufferTest_.allTests),
         testCase(BehaviorSubjectTest_.allTests),
         testCase(ObservableDebugTest_.allTests),
@@ -2020,6 +2038,7 @@ func XCTMain(_ tests: [() -> ()]) {
         testCase(ObservableSwitchIfEmptyTest_.allTests),
         testCase(ObservableThrottleTest_.allTests),
         testCase(ObservableTakeUntilTest_.allTests),
+        testCase(ConcurrentDispatchQueueSchedulerTests_.allTests),
         testCase(ObservableMergeTest_.allTests),
         testCase(ObservableReduceTest_.allTests),
         testCase(SignalTests_.allTests),

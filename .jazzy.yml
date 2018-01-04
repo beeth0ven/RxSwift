@@ -271,6 +271,7 @@ custom_categories:
   - ConcurrentDispatchQueueScheduler
   - ConcurrentMainScheduler
   - CurrentThreadScheduler
+  - DispatchTimeConverter
   - HistoricalScheduler
   - HistoricalSchedulerTimeConverter
   - MainScheduler
