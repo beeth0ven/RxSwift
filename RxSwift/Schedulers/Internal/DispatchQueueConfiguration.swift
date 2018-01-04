@@ -14,13 +14,6 @@ struct DispatchQueueConfiguration {
     let leeway: DispatchTimeInterval
 }
 
-private func dispatchInterval(_ interval: Foundation.TimeInterval) -> DispatchTimeInterval {
-    precondition(interval >= 0.0)
-    // TODO: Replace 1000 with something that actually works 
-    // NSEC_PER_MSEC returns 1000000
-    return DispatchTimeInterval.milliseconds(Int(interval * 1000.0))
-}
-
 extension DispatchQueueConfiguration {
     func schedule<StateType>(_ state: StateType, action: @escaping (StateType) -> Disposable) -> Disposable {
         let cancel = SingleAssignmentDisposable()
@@ -38,53 +31,26 @@ extension DispatchQueueConfiguration {
     }
 
     func scheduleRelative<StateType>(_ state: StateType, dueTime: Foundation.TimeInterval, action: @escaping (StateType) -> Disposable) -> Disposable {
-        let deadline = DispatchTime.now() + dispatchInterval(dueTime)
+        let mappedDueTime = DispatchTimeConverter.dispatchTimeInterval(dueTime)
+        return self.scheduleRelative(state, dueTime: mappedDueTime, action: action)
+    }
 
+    func schedulePeriodic<StateType>(_ state: StateType, startAfter: TimeInterval, period: TimeInterval, action: @escaping (StateType) -> StateType) -> Disposable {
+        let mappedStartAfter = DispatchTimeConverter.dispatchTimeInterval(startAfter)
+        let mappedPeriod = DispatchTimeConverter.dispatchTimeInterval(period)
+        return self.schedulePeriodic(state, startAfter: mappedStartAfter, period: mappedPeriod, action: action)
+    }
+    
+    func scheduleRelative<StateType>(_ state: StateType, dueTime: DispatchTimeInterval, action: @escaping (StateType) -> Disposable) -> Disposable {
+        let deadline = DispatchTime.now() + dueTime
+        
         let compositeDisposable = CompositeDisposable()
-
+        
         let timer = DispatchSource.makeTimerSource(queue: queue)
         #if swift(>=4.0)
             timer.schedule(deadline: deadline, leeway: leeway)
         #else
             timer.scheduleOneshot(deadline: deadline, leeway: leeway)
-        #endif
-
-        // TODO:
-        // This looks horrible, and yes, it is.
-        // It looks like Apple has made a conceputal change here, and I'm unsure why.
-        // Need more info on this.
-        // It looks like just setting timer to fire and not holding a reference to it
-        // until deadline causes timer cancellation.
-        var timerReference: DispatchSourceTimer? = timer
-        let cancelTimer = Disposables.create {
-            timerReference?.cancel()
-            timerReference = nil
-        }
-
-        timer.setEventHandler(handler: {
-            if compositeDisposable.isDisposed {
-                return
-            }
-            _ = compositeDisposable.insert(action(state))
-            cancelTimer.dispose()
-        })
-        timer.resume()
-
-        _ = compositeDisposable.insert(cancelTimer)
-
-        return compositeDisposable
-    }
-
-    func schedulePeriodic<StateType>(_ state: StateType, startAfter: TimeInterval, period: TimeInterval, action: @escaping (StateType) -> StateType) -> Disposable {
-        let initial = DispatchTime.now() + dispatchInterval(startAfter)
-
-        var timerState = state
-
-        let timer = DispatchSource.makeTimerSource(queue: queue)
-        #if swift(>=4.0)
-            timer.schedule(deadline: initial, repeating: dispatchInterval(period), leeway: leeway)
-        #else
-            timer.scheduleRepeating(deadline: initial, interval: dispatchInterval(period), leeway: leeway)
         #endif
         
         // TODO:
@@ -98,7 +64,45 @@ extension DispatchQueueConfiguration {
             timerReference?.cancel()
             timerReference = nil
         }
-
+        
+        timer.setEventHandler(handler: {
+            if compositeDisposable.isDisposed {
+                return
+            }
+            _ = compositeDisposable.insert(action(state))
+            cancelTimer.dispose()
+        })
+        timer.resume()
+        
+        _ = compositeDisposable.insert(cancelTimer)
+        
+        return compositeDisposable
+    }
+    
+    func schedulePeriodic<StateType>(_ state: StateType, startAfter: DispatchTimeInterval, period: DispatchTimeInterval, action: @escaping (StateType) -> StateType) -> Disposable {
+        let initial = DispatchTime.now() + startAfter
+        
+        var timerState = state
+        
+        let timer = DispatchSource.makeTimerSource(queue: queue)
+        #if swift(>=4.0)
+            timer.schedule(deadline: initial, repeating: period, leeway: leeway)
+        #else
+            timer.scheduleRepeating(deadline: initial, interval: period, leeway: leeway)
+        #endif
+        
+        // TODO:
+        // This looks horrible, and yes, it is.
+        // It looks like Apple has made a conceputal change here, and I'm unsure why.
+        // Need more info on this.
+        // It looks like just setting timer to fire and not holding a reference to it
+        // until deadline causes timer cancellation.
+        var timerReference: DispatchSourceTimer? = timer
+        let cancelTimer = Disposables.create {
+            timerReference?.cancel()
+            timerReference = nil
+        }
+        
         timer.setEventHandler(handler: {
             if cancelTimer.isDisposed {
                 return

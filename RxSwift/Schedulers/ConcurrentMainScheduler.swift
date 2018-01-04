@@ -85,4 +85,31 @@ public final class ConcurrentMainScheduler : SchedulerType {
     public func schedulePeriodic<StateType>(_ state: StateType, startAfter: TimeInterval, period: TimeInterval, action: @escaping (StateType) -> StateType) -> Disposable {
         return _mainScheduler.schedulePeriodic(state, startAfter: startAfter, period: period, action: action)
     }
+    
+    
+    /**
+     Schedules an action to be executed.
+     
+     - parameter state: State passed to the action to be executed.
+     - parameter dueTime: Relative time after which to execute the action.
+     - parameter action: Action to be executed.
+     - returns: The disposable object used to cancel the scheduled action (best effort).
+     */
+    public func scheduleRelative<StateType>(_ state: StateType, dueTime: DispatchTimeInterval, action: @escaping (StateType) -> Disposable) -> Disposable {
+        return _mainScheduler.scheduleRelative(state, dueTime: dueTime, action: action)
+    }
+    
+    
+    /**
+     Schedules a periodic piece of work.
+     
+     - parameter state: State passed to the action to be executed.
+     - parameter startAfter: Period after which initial work should be run.
+     - parameter period: Period for running the work periodically.
+     - parameter action: Action to be executed.
+     - returns: The disposable object used to cancel the scheduled action (best effort).
+     */
+    public func schedulePeriodic<StateType>(_ state: StateType, startAfter: DispatchTimeInterval, period: DispatchTimeInterval, action: @escaping (StateType) -> StateType) -> Disposable {
+        return _mainScheduler.schedulePeriodic(state, startAfter: startAfter, period: period, action: action)
+    }
 }
