@@ -17,26 +17,44 @@ class ObservableTimerTest : RxTest {
 
 extension ObservableTimerTest {
     func testTimer_Basic() {
-        let scheduler = TestScheduler(initialClock: 0)
-
-        let res = scheduler.start {
-            Observable<Int>.timer(100, scheduler: scheduler)
+        
+        let factories: [(SchedulerType) -> Observable<Int>] = [
+        { scheduler in Observable<Int>.timer(100, scheduler: scheduler) },
+        { scheduler in Observable<Int>.timer(.seconds(100), scheduler: scheduler) },
+        { scheduler in Observable<Int>.timer(.milliseconds(100_000), scheduler: scheduler) }
+        ]
+        
+        for factory in factories {
+            let scheduler = TestScheduler(initialClock: 0)
+            
+            let res = scheduler.start {
+                factory(scheduler)
+            }
+            
+            let correct = Recorded.events(
+                .next(300, 0),
+                .completed(300)
+            )
+            
+            XCTAssertEqual(res.events, correct)
         }
-
-        let correct = Recorded.events(
-            .next(300, 0),
-            .completed(300)
-        )
-
-        XCTAssertEqual(res.events, correct)
     }
 
     #if TRACE_RESOURCES
     
         func testTimerReleasesResourcesOnComplete() {
-            let scheduler = TestScheduler(initialClock: 0)
-            _ = Observable<Int>.timer(100, scheduler: scheduler).subscribe()
-            scheduler.start()
+            
+            let factories: [(SchedulerType) -> Observable<Int>] = [
+            { scheduler in Observable<Int>.timer(100, scheduler: scheduler) },
+            { scheduler in Observable<Int>.timer(.seconds(100), scheduler: scheduler) },
+            { scheduler in Observable<Int>.timer(.milliseconds(100_000), scheduler: scheduler) }
+            ]
+            
+            for factory in factories {
+                let scheduler = TestScheduler(initialClock: 0)
+                _ = factory(scheduler).subscribe()
+                scheduler.start()
+            }
         }
 
     #endif
@@ -46,111 +64,160 @@ extension ObservableTimerTest {
 extension ObservableTimerTest {
 
     func testInterval_TimeSpan_Basic() {
-        let scheduler = TestScheduler(initialClock: 0)
-
-        let res = scheduler.start {
-            Observable<Int64>.interval(100, scheduler: scheduler)
+        
+        let factories: [(SchedulerType) -> Observable<Int64>] = [
+        { scheduler in Observable<Int64>.interval(100, scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.seconds(100), scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.milliseconds(100_000), scheduler: scheduler) }
+        ]
+        
+        for factory in factories {
+            
+            let scheduler = TestScheduler(initialClock: 0)
+            
+            let res = scheduler.start {
+                factory(scheduler)
+            }
+            
+            let correct = Recorded.events(
+                .next(300, 0 as Int64),
+                .next(400, 1),
+                .next(500, 2),
+                .next(600, 3),
+                .next(700, 4),
+                .next(800, 5),
+                .next(900, 6)
+            )
+            
+            XCTAssertEqual(res.events, correct)
         }
-
-        let correct = Recorded.events(
-            .next(300, 0 as Int64),
-            .next(400, 1),
-            .next(500, 2),
-            .next(600, 3),
-            .next(700, 4),
-            .next(800, 5),
-            .next(900, 6)
-        )
-
-        XCTAssertEqual(res.events, correct)
     }
 
     func testInterval_TimeSpan_Zero() {
-        let scheduler = TestScheduler(initialClock: 0)
-
-        let res = scheduler.start(disposed: 210) {
-            Observable<Int64>.interval(0, scheduler: scheduler)
+        
+        let factories: [(SchedulerType) -> Observable<Int64>] = [
+        { scheduler in Observable<Int64>.interval(0, scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.seconds(0), scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.milliseconds(0), scheduler: scheduler) }
+        ]
+        
+        for factory in factories {
+            
+            let scheduler = TestScheduler(initialClock: 0)
+            
+            let res = scheduler.start(disposed: 210) {
+                factory(scheduler)
+            }
+            
+            let correct = Recorded.events(
+                .next(201, 0 as Int64),
+                .next(202, 1),
+                .next(203, 2),
+                .next(204, 3),
+                .next(205, 4),
+                .next(206, 5),
+                .next(207, 6),
+                .next(208, 7),
+                .next(209, 8)
+            )
+            
+            XCTAssertEqual(res.events, correct)
         }
-
-        let correct = Recorded.events(
-            .next(201, 0 as Int64),
-            .next(202, 1),
-            .next(203, 2),
-            .next(204, 3),
-            .next(205, 4),
-            .next(206, 5),
-            .next(207, 6),
-            .next(208, 7),
-            .next(209, 8)
-        )
-
-        XCTAssertEqual(res.events, correct)
     }
 
     func testInterval_TimeSpan_Zero_DefaultScheduler() {
-        let scheduler = SerialDispatchQueueScheduler(qos: .default)
-
-        let observer = PrimitiveMockObserver<Int64>()
-
-        let expectCompleted = expectation(description: "It will complete")
-
-        let d = Observable<Int64>.interval(0, scheduler: scheduler).takeWhile { $0 < 10 } .subscribe(onNext: { t in
-            observer.on(.next(t))
-        }, onCompleted: {
-            expectCompleted.fulfill()
-        })
-
-        defer {
-            d.dispose()
+        
+        let factories: [(SchedulerType) -> Observable<Int64>] = [
+        { scheduler in Observable<Int64>.interval(0, scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.seconds(0), scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.milliseconds(0), scheduler: scheduler) }
+        ]
+        
+        for factory in factories {
+            
+            let scheduler = SerialDispatchQueueScheduler(qos: .default)
+            
+            let observer = PrimitiveMockObserver<Int64>()
+            
+            let expectCompleted = expectation(description: "It will complete")
+            
+            let d = factory(scheduler).takeWhile { $0 < 10 } .subscribe(onNext: { t in
+                observer.on(.next(t))
+            }, onCompleted: {
+                expectCompleted.fulfill()
+            })
+            
+            defer {
+                d.dispose()
+            }
+            
+            waitForExpectations(timeout: 1.0) { e in
+                XCTAssert(e == nil, "Did not complete")
+            }
+            
+            let cleanResources = expectation(description: "Clean resources")
+            
+            _ = scheduler.schedule(()) { _ in
+                cleanResources.fulfill()
+                return Disposables.create()
+            }
+            
+            waitForExpectations(timeout: 1.0) { e in
+                XCTAssert(e == nil, "Did not clean up")
+            }
+            
+            XCTAssertTrue(observer.events.count == 10)
         }
-
-        waitForExpectations(timeout: 1.0) { e in
-            XCTAssert(e == nil, "Did not complete")
-        }
-
-        let cleanResources = expectation(description: "Clean resources")
-
-        _ = scheduler.schedule(()) { _ in
-            cleanResources.fulfill()
-            return Disposables.create()
-        }
-
-        waitForExpectations(timeout: 1.0) { e in
-            XCTAssert(e == nil, "Did not clean up")
-        }
-
-        XCTAssertTrue(observer.events.count == 10)
     }
 
     func testInterval_TimeSpan_Disposed() {
-        let scheduler = TestScheduler(initialClock: 0)
-
-        let res = scheduler.start {
-            Observable<Int64>.interval(1000, scheduler: scheduler)
-        }
-
-        let correct: [Recorded<Event<Int64>>] = [
-
+        
+        let factories: [(SchedulerType) -> Observable<Int64>] = [
+        { scheduler in Observable<Int64>.interval(1000, scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.seconds(1000), scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.milliseconds(1000_000), scheduler: scheduler) }
         ]
-
-        XCTAssertEqual(res.events, correct)
-
+        
+        for factory in factories {
+            
+            let scheduler = TestScheduler(initialClock: 0)
+            
+            let res = scheduler.start {
+                factory(scheduler)
+            }
+            
+            let correct: [Recorded<Event<Int64>>] = [
+                
+            ]
+            
+            XCTAssertEqual(res.events, correct)
+        }
     }
 
     func test_IntervalWithRealScheduler() {
-        let scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
-
-        let start = Date()
-
-        let a = try! Observable<Int64>.interval(1, scheduler: scheduler)
-            .take(2)
-            .toBlocking()
-            .toArray()
-
-        let end = Date()
-
-        XCTAssertEqual(2, end.timeIntervalSince(start), accuracy: 0.5)
-        XCTAssertEqual(a, [0, 1])
+        
+        let factories: [(SchedulerType) -> Observable<Int64>] = [
+        { scheduler in Observable<Int64>.interval(1, scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.seconds(1), scheduler: scheduler) },
+        { scheduler in Observable<Int64>.interval(.milliseconds(1_000), scheduler: scheduler) }
+        ]
+        
+        for factory in factories {
+            
+            let scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+            
+            let start = Date()
+            
+            let a = try! factory(scheduler)
+                .take(2)
+                .toBlocking()
+                .toArray()
+            
+            let end = Date()
+            
+            XCTAssertEqual(2, end.timeIntervalSince(start), accuracy: 0.5)
+            XCTAssertEqual(a, [0, 1])
+        }
     }
 
 }
