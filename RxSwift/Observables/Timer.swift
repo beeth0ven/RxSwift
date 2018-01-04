@@ -6,6 +6,8 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import enum Dispatch.DispatchTimeInterval
+
 extension ObservableType where E : RxAbstractInteger {
     /**
      Returns an observable sequence that produces a value after each period, using the specified scheduler to run timers and to send out observer messages.
@@ -18,10 +20,26 @@ extension ObservableType where E : RxAbstractInteger {
      */
     public static func interval(_ period: RxTimeInterval, scheduler: SchedulerType)
         -> Observable<E> {
-        return Timer(dueTime: period,
-                     period: period,
-                     scheduler: scheduler
-        )
+            let mappedPeriod = DispatchTimeConverter.dispatchTimeInterval(period)
+            return self.interval(mappedPeriod, scheduler: scheduler)
+    }
+    
+    /**
+     Returns an observable sequence that produces a value after each period, using the specified scheduler to run timers and to send out observer messages.
+     
+     - seealso: [interval operator on reactivex.io](http://reactivex.io/documentation/operators/interval.html)
+     
+     - parameter period: Period for producing the values in the resulting sequence.
+     - parameter scheduler: Scheduler to run the timer on.
+     - returns: An observable sequence that produces a value after each period.
+     */
+    public static func interval(_ period: DispatchTimeInterval, scheduler: SchedulerType)
+        -> Observable<E> {
+            return Timer(
+                dueTime: period,
+                period: period,
+                scheduler: scheduler
+            )
     }
 }
 
@@ -38,11 +56,28 @@ extension ObservableType where E: RxAbstractInteger {
      */
     public static func timer(_ dueTime: RxTimeInterval, period: RxTimeInterval? = nil, scheduler: SchedulerType)
         -> Observable<E> {
-        return Timer(
-            dueTime: dueTime,
-            period: period,
-            scheduler: scheduler
-        )
+            let mappedDueTime = DispatchTimeConverter.dispatchTimeInterval(dueTime)
+            let mappedPeriod = period.map(DispatchTimeConverter.dispatchTimeInterval)
+            return self.timer(mappedDueTime, period: mappedPeriod, scheduler: scheduler)
+    }
+    
+    /**
+     Returns an observable sequence that periodically produces a value after the specified initial relative due time has elapsed, using the specified scheduler to run timers.
+     
+     - seealso: [timer operator on reactivex.io](http://reactivex.io/documentation/operators/timer.html)
+     
+     - parameter dueTime: Relative time at which to produce the first value.
+     - parameter period: Period to produce subsequent values.
+     - parameter scheduler: Scheduler to run timers on.
+     - returns: An observable sequence that produces a value after due time has elapsed and then each period.
+     */
+    public static func timer(_ dueTime: DispatchTimeInterval, period: DispatchTimeInterval? = nil, scheduler: SchedulerType)
+        -> Observable<E> {
+            return Timer(
+                dueTime: dueTime,
+                period: period,
+                scheduler: scheduler
+            )
     }
 }
 
@@ -87,10 +122,10 @@ final fileprivate class TimerOneOffSink<O: ObserverType> : Sink<O> where O.E : R
 
 final fileprivate class Timer<E: RxAbstractInteger>: Producer<E> {
     fileprivate let _scheduler: SchedulerType
-    fileprivate let _dueTime: RxTimeInterval
-    fileprivate let _period: RxTimeInterval?
+    fileprivate let _dueTime: DispatchTimeInterval
+    fileprivate let _period: DispatchTimeInterval?
     
-    init(dueTime: RxTimeInterval, period: RxTimeInterval?, scheduler: SchedulerType) {
+    init(dueTime: DispatchTimeInterval, period: DispatchTimeInterval?, scheduler: SchedulerType) {
         _scheduler = scheduler
         _dueTime = dueTime
         _period = period
